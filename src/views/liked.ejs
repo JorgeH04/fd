@@ -1,0 +1,1090 @@
+<% include partials/_header %>
+
+        <!--====== App Content ======-->
+        <div class="app-content">
+
+            <!--====== Section 1 ======-->
+            <div class="u-s-p-y-60">
+
+                <!--====== Section Content ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="breadcrumb">
+                            <div class="breadcrumb__wrap">
+                                <ul class="breadcrumb__list">
+                                    <li class="has-separator">
+                                        <a href="/">Inicio</a></li>
+                                    <li class="is-marked">
+                                        <a>Favoritos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--====== End - Section 1 ======-->
+
+
+            <!--====== Section 2 ======-->
+            <div class="u-s-p-b-60">
+
+                <!--====== Section Intro ======-->
+                <div class="section__intro u-s-m-b-60">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section__text-wrap">
+                                    <h1 class="section__heading u-c-secondary">Favoritos</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Intro ======-->
+
+
+                <!--====== Section Content ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+
+                             
+                                <% likedofertauno.forEach(function (ofertaun) { %>
+                                <!--====== Wishlist Product ======-->
+                                <div class="p">
+                                <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                    <div class="w-r__container">
+                                        <div class="w-r__wrap-1">
+                                            <div class="w-r__img-wrap">
+
+                                                <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                            <div class="w-r__info">
+
+                                                <span class="w-r__name">
+
+                                                    <a><%= ofertaun.title %></a></span>
+
+                                                <span class="w-r__category">
+
+                                                    <a>   </a></span>
+
+                                                <span class="w-r__price">$<%= ofertaun.price %>
+
+                                                    <span class="w-r__discount">     </span></span></div>
+                                        </div>
+                                        <div class="w-r__wrap-2">
+
+                                            <a 
+                                            href="/addtocardofertauno/<%= ofertaun.id %>" 
+                                            class="w-r__link btn--e-brand-b-2"  >
+                                            AGREGAR AL CARRO</a>
+
+                                            <a 
+                                            class="w-r__link btn--e-transparent-platinum-b-2" 
+                                            href="/ofertaunoredirect/<%= ofertaun.id %>">
+                                            VER</a>
+
+                                            <a 
+                                            class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                            href="/like/<%= ofertaun.id %>"  
+                                            id="unlike-uno"  data-id="<%= ofertaun.id %>"
+                                            ></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                <!--====== End - Wishlist Product ======-->
+                                <% }) %>
+
+
+
+                                <% likedofertados.forEach(function (ofertaun) { %>
+                                    <!--====== Wishlist Product ======-->
+                                    <div class="p">
+                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                        <div class="w-r__container">
+                                            <div class="w-r__wrap-1">
+                                                <div class="w-r__img-wrap">
+    
+                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                <div class="w-r__info">
+    
+                                                    <span class="w-r__name">
+    
+                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+    
+                                                    <span class="w-r__category">
+    
+                                                        <a href="shop-side-version-2.html">   </a></span>
+    
+                                                    <span class="w-r__price">$<%= ofertaun.price %>
+    
+                                                        <span class="w-r__discount">     </span></span></div>
+                                            </div>
+                                            <div class="w-r__wrap-2">
+    
+                                                <a 
+                                                href="/addtocardofertados/<%= ofertaun.id %>"
+                                                class="w-r__link btn--e-brand-b-2"  >
+                                                AGREGAR AL CARRO</a>
+    
+                                                <a 
+                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                href="/ofertadosredirect/<%= ofertaun.id %>">
+                                                VER</a>
+    
+                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                href="/likedos/<%= ofertaun.id %>"
+                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                ></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <!--====== End - Wishlist Product ======-->
+                                    <% }) %>
+
+
+
+
+                                    <% likedofertatres.forEach(function (ofertaun) { %>
+                                        <!--====== Wishlist Product ======-->
+                                        <div class="p">
+                                        <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                            <div class="w-r__container">
+                                                <div class="w-r__wrap-1">
+                                                    <div class="w-r__img-wrap">
+        
+                                                        <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                    <div class="w-r__info">
+        
+                                                        <span class="w-r__name">
+        
+                                                            <a href="product-detail.html"><%= ofertaun.title %></a></span>
+        
+                                                        <span class="w-r__category">
+        
+                                                            <a href="shop-side-version-2.html">   </a></span>
+        
+                                                        <span class="w-r__price">$<%= ofertaun.price %>
+        
+                                                            <span class="w-r__discount">     </span></span></div>
+                                                </div>
+                                                <div class="w-r__wrap-2">
+        
+                                                    <a 
+                                                    href="/addtocardofertatres/<%= ofertaun.id %>"
+                                                    class="w-r__link btn--e-brand-b-2"  >
+                                                    AGREGAR AL CARRO</a>
+        
+                                                    <a 
+                                                    class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                    href="/ofertatresredirect/<%= ofertaun.id %>">
+                                                    VER</a>
+        
+                                                    <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                    href="/liketres/<%= ofertaun.id %>"
+                                                    id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                    ></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <!--====== End - Wishlist Product ======-->
+                                        <% }) %>
+
+
+
+
+                                        <% likedproduno.forEach(function (ofertaun) { %>
+                                            <!--====== Wishlist Product ======-->
+                                            <div class="p">
+                                            <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                <div class="w-r__container">
+                                                    <div class="w-r__wrap-1">
+                                                        <div class="w-r__img-wrap">
+            
+                                                            <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                        <div class="w-r__info">
+            
+                                                            <span class="w-r__name">
+            
+                                                                <a href="product-detail.html"><%= ofertaun.title %></a></span>
+            
+                                                            <span class="w-r__category">
+            
+                                                                <a href="shop-side-version-2.html">   </a></span>
+            
+                                                            <span class="w-r__price">$<%= ofertaun.price %>
+            
+                                                                <span class="w-r__discount">     </span></span></div>
+                                                    </div>
+                                                    <div class="w-r__wrap-2">
+            
+                                                        <a 
+                                                        href="/addtocardproduno/<%= ofertaun.id %>"
+                                                        class="w-r__link btn--e-brand-b-2"  >
+                                                        AGREGAR AL CARRO</a>
+            
+                                                        <a 
+                                                        class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                        href="/sahumos-20a25com-detalles/<%= ofertaun.id %>">
+                                                        VER</a>
+            
+                                                        <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                        href="/likeproduno/<%= ofertaun.id %>"
+                                                        id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                        ></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <!--====== End - Wishlist Product ======-->
+                                            <% }) %>
+
+
+
+
+                                            <% likedproddos.forEach(function (ofertaun) { %>
+                                                <!--====== Wishlist Product ======-->
+                                                <div class="p">
+                                                <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                    <div class="w-r__container">
+                                                        <div class="w-r__wrap-1">
+                                                            <div class="w-r__img-wrap">
+                
+                                                                <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                            <div class="w-r__info">
+                
+                                                                <span class="w-r__name">
+                
+                                                                    <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                
+                                                                <span class="w-r__category">
+                
+                                                                    <a href="shop-side-version-2.html">   </a></span>
+                
+                                                                <span class="w-r__price">$<%= ofertaun.price %>
+                
+                                                                    <span class="w-r__discount">     </span></span></div>
+                                                        </div>
+                                                        <div class="w-r__wrap-2">
+                
+                                                            <a 
+                                                            href="/addtocardproddos/<%= ofertaun.id %>"
+                                                            class="w-r__link btn--e-brand-b-2"  >
+                                                            AGREGAR AL CARRO</a>
+                
+                                                            <a 
+                                                            class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                            href="/sahumos-35a40com-detalles/<%= ofertaun.id %>">
+                                                            VER</a>
+                
+                                                            <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                            href="/likeproddos/<%= ofertaun.id %>"
+                                                            id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                            ></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <!--====== End - Wishlist Product ======-->
+                                                <% }) %>
+
+
+
+
+
+
+
+
+                                                <% likedprodtres.forEach(function (ofertaun) { %>
+                                                    <!--====== Wishlist Product ======-->
+                                                    <div class="p">
+                                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                        <div class="w-r__container">
+                                                            <div class="w-r__wrap-1">
+                                                                <div class="w-r__img-wrap">
+                    
+                                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                <div class="w-r__info">
+                    
+                                                                    <span class="w-r__name">
+                    
+                                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                    
+                                                                    <span class="w-r__category">
+                    
+                                                                        <a href="shop-side-version-2.html">   </a></span>
+                    
+                                                                    <span class="w-r__price">$<%= ofertaun.price %>
+                    
+                                                                        <span class="w-r__discount">     </span></span></div>
+                                                            </div>
+                                                            <div class="w-r__wrap-2">
+                    
+                                                                <a 
+                                                                href="/addtocardprodtres/<%= ofertaun.id %>"
+                                                                class="w-r__link btn--e-brand-b-2"  >
+                                                                AGREGAR AL CARRO</a>
+                    
+                                                                <a 
+                                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                href="/lineanatural-detalles/<%= ofertaun.id %>">
+                                                                VER</a>
+                    
+                                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                href="/likeprodtres/<%= ofertaun.id %>"
+                                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                ></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!--====== End - Wishlist Product ======-->
+                                                    <% }) %>
+
+
+
+
+
+                                                    <% likedprodcuatro.forEach(function (ofertaun) { %>
+                                                        <!--====== Wishlist Product ======-->
+                                                        <div class="p">
+                                                        <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                            <div class="w-r__container">
+                                                                <div class="w-r__wrap-1">
+                                                                    <div class="w-r__img-wrap">
+                        
+                                                                        <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                    <div class="w-r__info">
+                        
+                                                                        <span class="w-r__name">
+                        
+                                                                            <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                        
+                                                                        <span class="w-r__category">
+                        
+                                                                            <a href="shop-side-version-2.html">   </a></span>
+                        
+                                                                        <span class="w-r__price">$<%= ofertaun.price %>
+                        
+                                                                            <span class="w-r__discount">     </span></span></div>
+                                                                </div>
+                                                                <div class="w-r__wrap-2">
+                        
+                                                                    <a 
+                                                                    href="/addtocardprodcuatro/<%= ofertaun.id %>"
+                                                                    class="w-r__link btn--e-brand-b-2"  >
+                                                                    AGREGAR AL CARRO</a>
+                        
+                                                                    <a 
+                                                                    class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                    href="/lineapalosanto-detalles/<%= ofertaun.id %>">
+                                                                    VER</a>
+                        
+                                                                    <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                    href="/likeprodcuatro/<%= ofertaun.id %>"
+                                                                    id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                    ></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                        <!--====== End - Wishlist Product ======-->
+                                                        <% }) %>
+
+
+
+
+                                                        
+                                                <% likedprodcinco.forEach(function (ofertaun) { %>
+                                                    <!--====== Wishlist Product ======-->
+                                                    <div class="p">
+                                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                        <div class="w-r__container">
+                                                            <div class="w-r__wrap-1">
+                                                                <div class="w-r__img-wrap">
+                    
+                                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                <div class="w-r__info">
+                    
+                                                                    <span class="w-r__name">
+                    
+                                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                    
+                                                                    <span class="w-r__category">
+                    
+                                                                        <a href="shop-side-version-2.html">   </a></span>
+                    
+                                                                    <span class="w-r__price">$<%= ofertaun.price %>
+                    
+                                                                        <span class="w-r__discount">     </span></span></div>
+                                                            </div>
+                                                            <div class="w-r__wrap-2">
+                    
+                                                                <a 
+                                                                href="/addtocardprodcinco/<%= ofertaun.id %>"
+                                                                class="w-r__link btn--e-brand-b-2"  >
+                                                                AGREGAR AL CARRO</a>
+                    
+                                                                <a 
+                                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                href="/otraslineas-detalles/<%= ofertaun.id %>">
+                                                                VER</a>
+                    
+                                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                href="/likeprodcinco/<%= ofertaun.id %>"
+                                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                ></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!--====== End - Wishlist Product ======-->
+                                                    <% }) %>
+
+
+
+
+
+                                                    
+                                                <% likedprodseis.forEach(function (ofertaun) { %>
+                                                    <!--====== Wishlist Product ======-->
+                                                    <div class="p">
+                                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                        <div class="w-r__container">
+                                                            <div class="w-r__wrap-1">
+                                                                <div class="w-r__img-wrap">
+                    
+                                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                <div class="w-r__info">
+                    
+                                                                    <span class="w-r__name">
+                    
+                                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                    
+                                                                    <span class="w-r__category">
+                    
+                                                                        <a href="shop-side-version-2.html">   </a></span>
+                    
+                                                                    <span class="w-r__price">$<%= ofertaun.price %>
+                    
+                                                                        <span class="w-r__discount">     </span></span></div>
+                                                            </div>
+                                                            <div class="w-r__wrap-2">
+                    
+                                                                <a 
+                                                                href="/addtocardprodseis/<%= ofertaun.id %>"
+                                                                class="w-r__link btn--e-brand-b-2"  >
+                                                                AGREGAR AL CARRO</a>
+                    
+                                                                <a 
+                                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                href="/bombas-packx4-detalles/<%= ofertaun.id %>">
+                                                                VER</a>
+                    
+                                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                href="/likeprodseis/<%= ofertaun.id %>"
+                                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                ></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!--====== End - Wishlist Product ======-->
+                                                    <% }) %>
+
+
+
+
+
+
+
+                                                    
+                                                <% likedprodsiete.forEach(function (ofertaun) { %>
+                                                    <!--====== Wishlist Product ======-->
+                                                    <div class="p">
+                                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                        <div class="w-r__container">
+                                                            <div class="w-r__wrap-1">
+                                                                <div class="w-r__img-wrap">
+                    
+                                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                <div class="w-r__info">
+                    
+                                                                    <span class="w-r__name">
+                    
+                                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                    
+                                                                    <span class="w-r__category">
+                    
+                                                                        <a href="shop-side-version-2.html">   </a></span>
+                    
+                                                                    <span class="w-r__price">$<%= ofertaun.price %>
+                    
+                                                                        <span class="w-r__discount">     </span></span></div>
+                                                            </div>
+                                                            <div class="w-r__wrap-2">
+                    
+                                                                <a 
+                                                                href="/addtocardprodsiete/<%= ofertaun.id %>"
+                                                                class="w-r__link btn--e-brand-b-2"  >
+                                                                AGREGAR AL CARRO</a>
+                    
+                                                                <a 
+                                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                href="/bombas-packx8-detalles/<%= ofertaun.id %>">
+                                                                VER</a>
+                    
+                                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                href="/likeprodsiete/<%= ofertaun.id %>"
+                                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                ></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!--====== End - Wishlist Product ======-->
+                                                    <% }) %>
+
+
+
+
+                                                    
+                                                <% likedprodocho.forEach(function (ofertaun) { %>
+                                                    <!--====== Wishlist Product ======-->
+                                                    <div class="p">
+                                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                        <div class="w-r__container">
+                                                            <div class="w-r__wrap-1">
+                                                                <div class="w-r__img-wrap">
+                    
+                                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                <div class="w-r__info">
+                    
+                                                                    <span class="w-r__name">
+                    
+                                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                    
+                                                                    <span class="w-r__category">
+                    
+                                                                        <a href="shop-side-version-2.html">   </a></span>
+                    
+                                                                    <span class="w-r__price">$<%= ofertaun.price %>
+                    
+                                                                        <span class="w-r__discount">     </span></span></div>
+                                                            </div>
+                                                            <div class="w-r__wrap-2">
+                    
+                                                                <a 
+                                                                href="/addtocardprodocho/<%= ofertaun.id %>"
+                                                                class="w-r__link btn--e-brand-b-2"  >
+                                                                AGREGAR AL CARRO</a>
+                    
+                                                                <a 
+                                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                href="/pastillones-detalles/<%= ofertaun.id %>">
+                                                                VER</a>
+                    
+                                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                href="/likeprodocho/<%= ofertaun.id %>"
+                                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                ></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!--====== End - Wishlist Product ======-->
+                                                    <% }) %>
+
+
+        
+    
+
+                                                    <% likedprodnueve.forEach(function (ofertaun) { %>
+                                                        <!--====== Wishlist Product ======-->
+                                                        <div class="p">
+                                                        <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                            <div class="w-r__container">
+                                                                <div class="w-r__wrap-1">
+                                                                    <div class="w-r__img-wrap">
+                        
+                                                                        <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                    <div class="w-r__info">
+                        
+                                                                        <span class="w-r__name">
+                        
+                                                                            <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                        
+                                                                        <span class="w-r__category">
+                        
+                                                                            <a href="shop-side-version-2.html">   </a></span>
+                        
+                                                                        <span class="w-r__price">$<%= ofertaun.price %>
+                        
+                                                                            <span class="w-r__discount">     </span></span></div>
+                                                                </div>
+                                                                <div class="w-r__wrap-2">
+                        
+                                                                    <a 
+                                                                    href="/addtocardprodnueve/<%= ofertaun.id %>"
+                                                                    class="w-r__link btn--e-brand-b-2"  >
+                                                                    AGREGAR AL CARRO</a>
+                        
+                                                                    <a 
+                                                                    class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                    href="/hierbas-detalles/<%= ofertaun.id %>">
+                                                                    VER</a>
+                        
+                                                                    <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                    href="/likeprodnueve/<%= ofertaun.id %>"
+                                                                    id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                    ></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                        <!--====== End - Wishlist Product ======-->
+                                                        <% }) %>
+
+
+
+                                                        <% likedproddiez.forEach(function (ofertaun) { %>
+                                                            <!--====== Wishlist Product ======-->
+                                                            <div class="p">
+                                                            <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                                <div class="w-r__container">
+                                                                    <div class="w-r__wrap-1">
+                                                                        <div class="w-r__img-wrap">
+                            
+                                                                            <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                        <div class="w-r__info">
+                            
+                                                                            <span class="w-r__name">
+                            
+                                                                                <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                            
+                                                                            <span class="w-r__category">
+                            
+                                                                                <a href="shop-side-version-2.html">   </a></span>
+                            
+                                                                            <span class="w-r__price">$<%= ofertaun.price %>
+                            
+                                                                                <span class="w-r__discount">     </span></span></div>
+                                                                    </div>
+                                                                    <div class="w-r__wrap-2">
+                            
+                                                                        <a 
+                                                                        href="/addtocardproddiez/<%= ofertaun.id %>"
+                                                                        class="w-r__link btn--e-brand-b-2"  >
+                                                                        AGREGAR AL CARRO</a>
+                            
+                                                                        <a 
+                                                                        class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                        href="/sagradageometria-detalles/<%= ofertaun.id %>">
+                                                                        VER</a>
+                            
+                                                                        <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                        href="/likeproddiez/<%= ofertaun.id %>"
+                                                                        id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                        ></a></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                            <!--====== End - Wishlist Product ======-->
+                                                            <% }) %>
+
+
+
+
+                                                            <% likedprodonce.forEach(function (ofertaun) { %>
+                                                                <!--====== Wishlist Product ======-->
+                                                                <div class="p">
+                                                                <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                                    <div class="w-r__container">
+                                                                        <div class="w-r__wrap-1">
+                                                                            <div class="w-r__img-wrap">
+                                
+                                                                                <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                            <div class="w-r__info">
+                                
+                                                                                <span class="w-r__name">
+                                
+                                                                                    <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                                
+                                                                                <span class="w-r__category">
+                                
+                                                                                    <a href="shop-side-version-2.html">   </a></span>
+                                
+                                                                                <span class="w-r__price">$<%= ofertaun.price %>
+                                
+                                                                                    <span class="w-r__discount">     </span></span></div>
+                                                                        </div>
+                                                                        <div class="w-r__wrap-2">
+                                
+                                                                            <a 
+                                                                            href="/addtocardprodonce/<%= ofertaun.id %>"
+                                                                            class="w-r__link btn--e-brand-b-2"  >
+                                                                            AGREGAR AL CARRO</a>
+                                
+                                                                            <a 
+                                                                            class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                            href="/piramideenergetica-detalles/<%= ofertaun.id %>">
+                                                                            VER</a>
+                                
+                                                                            <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                            href="/likeprodonce/<%= ofertaun.id %>"
+                                                                            id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                            ></a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                                <!--====== End - Wishlist Product ======-->
+                                                                <% }) %>
+
+
+
+                                                                <% likedproddoce.forEach(function (ofertaun) { %>
+                                                                    <!--====== Wishlist Product ======-->
+                                                                    <div class="p">
+                                                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                                        <div class="w-r__container">
+                                                                            <div class="w-r__wrap-1">
+                                                                                <div class="w-r__img-wrap">
+                                    
+                                                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                                <div class="w-r__info">
+                                    
+                                                                                    <span class="w-r__name">
+                                    
+                                                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                                    
+                                                                                    <span class="w-r__category">
+                                    
+                                                                                        <a href="shop-side-version-2.html">   </a></span>
+                                    
+                                                                                    <span class="w-r__price">$<%= ofertaun.price %>
+                                    
+                                                                                        <span class="w-r__discount">     </span></span></div>
+                                                                            </div>
+                                                                            <div class="w-r__wrap-2">
+                                    
+                                                                                <a 
+                                                                                href="/addtocardproddoce/<%= ofertaun.id %>"
+                                                                                class="w-r__link btn--e-brand-b-2"  >
+                                                                                AGREGAR AL CARRO</a>
+                                    
+                                                                                <a 
+                                                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                                href="/carbones-pack12/<%= ofertaun.id %>">
+                                                                                VER</a>
+                                    
+                                                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                                href="/likeproddoce/<%= ofertaun.id %>"
+                                                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                                ></a></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                    <!--====== End - Wishlist Product ======-->
+                                                                    <% }) %>
+
+
+
+
+                                                                    
+                                                <% likedprodtrece.forEach(function (ofertaun) { %>
+                                                    <!--====== Wishlist Product ======-->
+                                                    <div class="p">
+                                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                        <div class="w-r__container">
+                                                            <div class="w-r__wrap-1">
+                                                                <div class="w-r__img-wrap">
+                    
+                                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                <div class="w-r__info">
+                    
+                                                                    <span class="w-r__name">
+                    
+                                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                    
+                                                                    <span class="w-r__category">
+                    
+                                                                        <a href="shop-side-version-2.html">   </a></span>
+                    
+                                                                    <span class="w-r__price">$<%= ofertaun.price %>
+                    
+                                                                        <span class="w-r__discount">     </span></span></div>
+                                                            </div>
+                                                            <div class="w-r__wrap-2">
+                    
+                                                                <a 
+                                                                href="/addtocardprodtrece/<%= ofertaun.id %>"
+                                                                class="w-r__link btn--e-brand-b-2"  >
+                                                                AGREGAR AL CARRO</a>
+                    
+                                                                <a 
+                                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                href="/carbones-packx24/<%= ofertaun.id %>">
+                                                                VER</a>
+                    
+                                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                href="/likeprodtrece/<%= ofertaun.id %>"
+                                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                ></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!--====== End - Wishlist Product ======-->
+                                                    <% }) %>
+
+
+
+                                                    
+                                                <% likedprodcatorce.forEach(function (ofertaun) { %>
+                                                    <!--====== Wishlist Product ======-->
+                                                    <div class="p">
+                                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                        <div class="w-r__container">
+                                                            <div class="w-r__wrap-1">
+                                                                <div class="w-r__img-wrap">
+                    
+                                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                <div class="w-r__info">
+                    
+                                                                    <span class="w-r__name">
+                    
+                                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                    
+                                                                    <span class="w-r__category">
+                    
+                                                                        <a href="shop-side-version-2.html">   </a></span>
+                    
+                                                                    <span class="w-r__price">$<%= ofertaun.price %>
+                    
+                                                                        <span class="w-r__discount">     </span></span></div>
+                                                            </div>
+                                                            <div class="w-r__wrap-2">
+                    
+                                                                <a 
+                                                                href="/addtocardprodcatorce/<%= ofertaun.id %>"
+                                                                class="w-r__link btn--e-brand-b-2"  >
+                                                                AGREGAR AL CARRO</a>
+                    
+                                                                <a 
+                                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                href="/individuales-detalles/<%= ofertaun.id %>">
+                                                                VER</a>
+                    
+                                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                href="/likeprodcatorce/<%= ofertaun.id %>"
+                                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                ></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!--====== End - Wishlist Product ======-->
+                                                    <% }) %>
+
+
+
+
+
+
+                                                    
+                                                <% likedprodquince.forEach(function (ofertaun) { %>
+                                                    <!--====== Wishlist Product ======-->
+                                                    <div class="p">
+                                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                        <div class="w-r__container">
+                                                            <div class="w-r__wrap-1">
+                                                                <div class="w-r__img-wrap">
+                    
+                                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                <div class="w-r__info">
+                    
+                                                                    <span class="w-r__name">
+                    
+                                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                    
+                                                                    <span class="w-r__category">
+                    
+                                                                        <a href="shop-side-version-2.html">   </a></span>
+                    
+                                                                    <span class="w-r__price">$<%= ofertaun.price %>
+                    
+                                                                        <span class="w-r__discount">     </span></span></div>
+                                                            </div>
+                                                            <div class="w-r__wrap-2">
+                    
+                                                                <a 
+                                                                href="/addtocardprodquince/<%= ofertaun.id %>"
+                                                                class="w-r__link btn--e-brand-b-2"  >
+                                                                AGREGAR AL CARRO</a>
+                    
+                                                                <a 
+                                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                href="/velones-detalles/<%= ofertaun.id %>">
+                                                                VER</a>
+                    
+                                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                href="/likeprodquince/<%= ofertaun.id %>"
+                                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                ></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!--====== End - Wishlist Product ======-->
+                                                    <% }) %>
+
+
+
+                                                    
+                                                <% likedproddieciseis.forEach(function (ofertaun) { %>
+                                                    <!--====== Wishlist Product ======-->
+                                                    <div class="p">
+                                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                        <div class="w-r__container">
+                                                            <div class="w-r__wrap-1">
+                                                                <div class="w-r__img-wrap">
+                    
+                                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                <div class="w-r__info">
+                    
+                                                                    <span class="w-r__name">
+                    
+                                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                    
+                                                                    <span class="w-r__category">
+                    
+                                                                        <a href="shop-side-version-2.html">   </a></span>
+                    
+                                                                    <span class="w-r__price">$<%= ofertaun.price %>
+                    
+                                                                        <span class="w-r__discount">     </span></span></div>
+                                                            </div>
+                                                            <div class="w-r__wrap-2">
+                    
+                                                                <a 
+                                                                href="/addtocardproddieciseis/<%= ofertaun.id %>"
+                                                                class="w-r__link btn--e-brand-b-2"  >
+                                                                AGREGAR AL CARRO</a>
+                    
+                                                                <a 
+                                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                href="/soja-detalles/<%= ofertaun.id %>">
+                                                                VER</a>
+                    
+                                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                href="/likeproddieciseis/<%= ofertaun.id %>"
+                                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                ></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!--====== End - Wishlist Product ======-->
+                                                    <% }) %>
+
+
+
+                                                    
+                                                <% likedproddiecisiete.forEach(function (ofertaun) { %>
+                                                    <!--====== Wishlist Product ======-->
+                                                    <div class="p">
+                                                    <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                        <div class="w-r__container">
+                                                            <div class="w-r__wrap-1">
+                                                                <div class="w-r__img-wrap">
+                    
+                                                                    <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                <div class="w-r__info">
+                    
+                                                                    <span class="w-r__name">
+                    
+                                                                        <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                    
+                                                                    <span class="w-r__category">
+                    
+                                                                        <a href="shop-side-version-2.html">   </a></span>
+                    
+                                                                    <span class="w-r__price">$<%= ofertaun.price %>
+                    
+                                                                        <span class="w-r__discount">     </span></span></div>
+                                                            </div>
+                                                            <div class="w-r__wrap-2">
+                    
+                                                                <a 
+                                                                href="/addtocardproddiecisiete/<%= ofertaun.id %>"
+                                                                class="w-r__link btn--e-brand-b-2"  >
+                                                                AGREGAR AL CARRO</a>
+                    
+                                                                <a 
+                                                                class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                href="/sahumadores-detalles/<%= ofertaun.id %>">
+                                                                VER</a>
+                    
+                                                                <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                href="/likeproddiecisiete/<%= ofertaun.id %>"
+                                                                id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                ></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!--====== End - Wishlist Product ======-->
+                                                    <% }) %>
+
+
+
+                                               
+                                                    <% likedproddieciocho.forEach(function (ofertaun) { %>
+                                                        <!--====== Wishlist Product ======-->
+                                                        <div class="p">
+                                                        <div class="w-r u-s-m-b-30"  data-id="<%= ofertaun.id %>">
+                                                            <div class="w-r__container">
+                                                                <div class="w-r__wrap-1">
+                                                                    <div class="w-r__img-wrap">
+                        
+                                                                        <img class="u-img-fluid" src="<%= ofertaun.image %>" alt=""></div>
+                                                                    <div class="w-r__info">
+                        
+                                                                        <span class="w-r__name">
+                        
+                                                                            <a href="product-detail.html"><%= ofertaun.title %></a></span>
+                        
+                                                                        <span class="w-r__category">
+                        
+                                                                            <a href="shop-side-version-2.html">   </a></span>
+                        
+                                                                        <span class="w-r__price">$<%= ofertaun.price %>
+                        
+                                                                            <span class="w-r__discount">     </span></span></div>
+                                                                </div>
+                                                                <div class="w-r__wrap-2">
+                        
+                                                                    <a 
+                                                                    href="/addtocardproddieciocho/<%= ofertaun.id %>"
+                                                                    class="w-r__link btn--e-brand-b-2"  >
+                                                                    AGREGAR AL CARRO</a>
+                        
+                                                                    <a 
+                                                                    class="w-r__link btn--e-transparent-platinum-b-2" 
+                                                                    href="/portaincienso-detalles/<%= ofertaun.id %>">
+                                                                    VER</a>
+                        
+                                                                    <a class="w-r__link btn--e-transparent-platinum-b-2 fas fa-trash" 
+                                                                    href="/likeproddieciocho/<%= ofertaun.id %>"
+                                                                    id="btn-unlike"  data-id="<%= ofertaun.id %>"
+                                                                    ></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                        <!--====== End - Wishlist Product ======-->
+                                                        <% }) %>     
+
+                           
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="route-box">
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Content ======-->
+            </div>
+            <!--====== End - Section 2 ======-->
+        </div>
+        <!--====== End - App Content ======-->
+        <% include partials/_footer %>

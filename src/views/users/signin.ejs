@@ -1,0 +1,139 @@
+<% include ../partials/_header %>
+
+
+
+        <!--====== App Content ======-->
+        <div class="app-content">
+
+                <!--====== Section 1 ======-->
+                <div class="u-s-p-y-60">
+    
+                    <!--====== Section Content ======-->
+                    <div class="section__content">
+                        <div class="container">
+                            <div class="breadcrumb">
+                                <div class="breadcrumb__wrap">
+                                    <ul class="breadcrumb__list">
+                                        <li class="has-separator">
+    
+                                            <a href="/">Home</a></li>
+                                        <li class="is-marked">
+    
+                                            <a>Signin</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section 1 ======-->
+    
+    
+                <!--====== Section 2 ======-->
+                <div class="u-s-p-b-60">
+    
+
+    
+    
+                    <!--====== Section Content ======-->
+                    <div class="section__content">
+                        <div class="container">
+                            <div class="row row--center">
+                                <div class="col-lg-6 col-md-8 u-s-m-b-30">
+                                    <div class="l-f-o">
+                                        <div class="l-f-o__pad-box">
+                                            
+                                            <div class="u-s-m-b-15">
+    
+                                            <h1 class="gl-h1">INICIAR SESIÓN</h1>
+    
+                                            <span class="gl-text u-s-m-b-30"></span>
+                                            <form action="/users/signin" method="POST" class="l-f-o__form">
+                                             
+                                                <div class="u-s-m-b-30">
+    
+                                                    <label class="gl-label" for="login-email">E-MAIL *</label>
+    
+                                                    <input 
+                                                    type="email" name="email" 
+                                                    class="input-text input-text--primary-style"  id="login-email" placeholder=" "></div>
+                                                <div class="u-s-m-b-30">
+    
+                                                    <label class="gl-label" for="login-password">CONTRASEÑA *</label>
+    
+                                                    <input 
+                                                    type="password" name="password" 
+                                                    class="input-text input-text--primary-style" 
+                                                    id="login-password" placeholder=" ">
+                                                </div>
+
+                                                <div class="gl-s-api">
+                                                    
+
+                                                <div class="gl-inline">
+                                                    <div class="u-s-m-b-30">
+                                                       
+                                                          <button class="btn btn--e-transparent-brand-b-2" 
+                                                           type="submit">LOGIN
+                                                          </button>
+                                                        
+                                                    </div>
+                                                    <div class="u-s-m-b-30">
+    
+                                                        <a class="gl-link" href="/forgot">olvidaste tu contraseña?</a></div>
+                                                </div>
+                                                <div class="u-s-m-b-30">
+    
+                                                    <!--====== Check Box ======-->
+                                                    <div class="check-box">
+    
+                                                           
+                                                        <div class="check-box__state check-box__state--primary">
+    
+                                                                <a href="/users/signup" 
+                                                                 >no tenés cuenta?</a>
+                                                        </div>
+                                                    </div>
+                                                    <!--====== End - Check Box ======-->
+                                                </div>
+                                            </form>
+                                            <div class="u-s-m-b-15">
+                                                 <!--======  
+                                                    <a href="/auth/facebook"> 
+                                                    <button class="gl-s-api__btn gl-s-api__btn--fb" 
+                                                    type="button"><i class="fab fa-facebook-f"></i>
+
+                                                        <span>Iniciar Sesión con Facebook</span>
+                                                    </button></div>
+                                                    </a>
+                                                <div class="u-s-m-b-15" >
+                                                   <a href="/google"> 
+                                                    <button class="gl-s-api__btn gl-s-api__btn--gplus"  
+                                                    type="button"style="background-color:red"><i class="fab fa-google"></i>
+
+                                                        <span>Iniciar Sesión con Google</span>
+                                                    </button>
+                                                    </a>  ======--> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--====== End - Section Content ======-->
+                </div>
+                <!--====== End - Section 2 ======-->
+            </div>
+            <!--====== End - App Content ======-->
+    
+
+
+
+
+
+
+
+
+    <% include ../partials/_footer %>

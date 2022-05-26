@@ -1,0 +1,152 @@
+<% include ../partials/_header %>
+
+
+
+        <!--====== App Content ======-->
+        <div class="app-content">
+
+            <!--====== Section 1 ======-->
+            <div class="u-s-p-y-60">
+
+                <!--====== Section Content ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="breadcrumb">
+                            <div class="breadcrumb__wrap">
+                                <ul class="breadcrumb__list">
+                                    <li class="has-separator">
+
+                                        <a href="/">Inicio</a></li>
+                                    <li class="is-marked">
+
+                                        <a >Registrarse</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--====== End - Section 1 ======-->
+
+
+            <!--====== Section 2 ======-->
+            <div class="u-s-p-b-60">
+
+                <!--====== Section Intro ======-->
+                <div class="section__intro u-s-m-b-60">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section__text-wrap">
+                                    <h1 class="section__heading u-c-secondary">CREATE UNA CUENTA</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Intro ======-->
+
+
+                <!--====== Section Content ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="row row--center">
+                            <div class="col-lg-6 col-md-8 u-s-m-b-30">
+                                <div class="l-f-o">
+                                    <div class="l-f-o__pad-box">
+                                        <h1 class="gl-h1">INFORMATION PERSONAL</h1>
+                                        <form action="/users/signup" method="POST" class="l-f-o__form">
+                                           
+                                            <div class="u-s-m-b-30">
+
+                                                <label class="gl-label" for="reg-fname">Nombre y apellido*</label>
+
+                                                <input 
+                                                type="text" name="name"  
+                                                class="input-text input-text--primary-style"  
+                                                 id="reg-fname" placeholder=" "></div>
+                                            <div class="u-s-m-b-30">
+
+                                                <label class="gl-label" for="reg-lname">Email *</label>
+
+                                                <input 
+                                                type="email" name="email" 
+                                                class="input-text input-text--primary-style"  
+                                                 id="reg-lname" placeholder=" "></div>
+                                                
+
+                            
+                                            <div class="u-s-m-b-30">
+
+                                                <label class="gl-label" for="reg-email">Contraseña *</label>
+
+                                                <input
+                                                 type="password"name="password" 
+                                                 id="password" class="input-text input-text--primary-style"  
+                                                 id="reg-email" placeholder=" ">
+                                            </div>
+                                            <div class="u-s-m-b-30">
+
+                                                <label class="gl-label"
+                                                 for="reg-password">Confirmar contraseña *</label>
+
+                                                <input type="password" 
+                                                name="confirm_password"  
+                                                class="input-text input-text--primary-style" 
+                                                 id="reg-password" placeholder=" ">
+                                            </div>
+                                            <div class="u-s-m-b-15">
+
+                                                <button 
+                                                class="btn btn--e-transparent-brand-b-2"
+                                                 type="submit">REGISTRARSE</button>
+                                                
+                                            </div>
+                                            <div class="u-s-m-b-15">
+
+                                                    <a  href="/users/signin">ya tenés una cuenta?</a>
+                                                </div>
+
+                                            
+                                        </form>
+                                        <div class="gl-s-api">
+                                            <div class="u-s-m-b-15">
+                                                <!--====== 
+                                              <a href="/facebook/callback"> 
+                                                <button class="gl-s-api__btn gl-s-api__btn--fb" type="button"><i class="fab fa-facebook-f"></i>
+
+                                                    <span>Registrarse con Facebook</span>
+                                                </button>
+                                            </a>
+                                            </div>
+                                            <div class="u-s-m-b-30">
+                                                       <a href="/google/callback">
+                                                <button style="background-color:red" class="gl-s-api__btn gl-s-api__btn--gplus" type="button"><i class="fab fa-google"></i>
+
+                                                    <span>Registrarse con Google</span>
+                                                </button>
+                                                </a>   ======-->    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Content ======-->
+            </div>
+            <!--====== End - Section 2 ======-->
+        </div>
+        <!--====== End - App Content ======-->
+
+
+
+
+
+
+
+
+
+  
+  <% include ../partials/_footer %>

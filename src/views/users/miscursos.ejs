@@ -1,0 +1,119 @@
+<% include ../partials/_header %>
+
+
+ 
+<!--====== App Content ======-->
+<div class="app-content">
+
+    <!--====== Section 1 ======-->
+    <div class="u-s-p-y-90">
+        <div class="container">
+            <div class="row">
+
+                    <% orders.forEach(function (order) { %>
+                        <% order.items.forEach(function (item) { %>
+                            <% if(order.status){ %> 
+                
+                <div class="col-lg-12 col-md-8 col-sm-12">
+                    <div class="bp bp--img u-s-m-b-30">
+                        <div class="bp__wrap">
+                            <div class="bp__thumbnaill">
+
+                                    <span class="bp__h1">
+
+                                            <a> <u>TU VISIÓN A TRAVÉS DE UNOS RAY BAN</u></a>
+                                            <br><br>
+                                            <p class="bp__p">Siempre nos dicen que los lentes Polarizados son mejores, y que por eso son mas caros, pero pocas veces nos explican el porqué son mejores.
+                                            </p>
+                                     </span>
+                                     <br>
+
+                                <!--====== Image Code 
+                                
+                               
+
+                                <iframe width="460" height="315" 
+                                allowfullscreen align="center" 
+                                src="<%= item.item.imagedos %>" frameborder="0"></iframe>======-->
+                                <audio controls loop>
+                                        <source src="<%= item.item.imagetres %>" type="audio/mpeg">
+
+                                    </audio>  
+                               
+                                <!--====== End - Image Code ======-->
+
+                                
+
+
+                            </div>
+                           
+                                
+
+                                 
+
+                    
+
+                                 <div class="blog-t-w">
+
+             
+                                </div>
+                                <p class="bp__p"> 
+                                </p>
+                                <br>
+                                <p class="bp__p">Tampoco nos hacen experimentar con nuestros propios ojos la diferencia que existe.
+                                    Por eso, diseñamos una imagen que te permitirá ver de manera fácil y rápida en que aspectos los lentes Polarizados son mejores.
+                                    Sin palabras técnicas ni cosas complicadas.</p>
+                                <br>
+                                <p class="bp__p">Como podrás ver, los lentes Polarizados eliminan los reflejos. En este caso en particular los elimina del vehículo, pero también lo hace en todo tipo de superficie como el asfalto, el agua de rio o mar, etc.
+                                    Esto permite lograr una mayor nitidez y en consecuencia tener una visión mucho más clara y confortable (incluso te permiten ver dentro del vehículo, cosa que con un lente sin Polarizar será imposible). </p>
+                                <br>
+                                 
+                                <div class="gl-l-r">
+                                    
+                                    <ul class="bp__social-list">
+                                   
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                       <% } %> 
+                    <% }) %>
+                <% }) %>
+
+
+
+
+
+
+
+
+
+                  
+                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== End - Section 1 ======-->
+</div>
+<!--====== End - App Content ======-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% include ../partials/_footer %>
