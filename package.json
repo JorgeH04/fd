@@ -18,7 +18,7 @@
     "cross-env": "^7.0.3",
     "crypto": "^1.0.1",
     "dotenv": "^16.0.1",
-    "ejs-mate": "^4.0.0",
+    "ejs-mate": "^3.0.0",
     "errorhandler": "^1.5.1",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
@@ -41,5 +41,8 @@
     "timeago.js": "^4.0.2",
     "uuid": "^3.3.2",
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
   }
 }

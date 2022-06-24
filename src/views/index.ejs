@@ -1,733 +1,615 @@
 <% include partials/_header %>
 
-      
-  <!--/ Carousel Star /-->
-  <div class="intro intro-carousel">
-    <div id="carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-1.jpg)">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345</p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Mount
-                      <br> Olive Road Two</h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
+<div class="slide-one-item home-slider owl-carousel">
+
+  <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row align-items-center justify-content-center text-center">
+        <div class="col-md-10">
+          <span class="d-inline-block bg-success text-white px-3 mb-3 property-offer-type rounded">For Rent</span>
+          <h1 class="mb-2">871 Crenshaw Blvd</h1>
+          <p class="mb-5"><strong class="h2 text-success font-weight-bold">$2,250,500</strong></p>
+          <p><a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 btn-2">See Details</a></p>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row align-items-center justify-content-center text-center">
+        <div class="col-md-10">
+          <span class="d-inline-block bg-danger text-white px-3 mb-3 property-offer-type rounded">For Sale</span>
+          <h1 class="mb-2">625 S. Berendo St</h1>
+          <p class="mb-5"><strong class="h2 text-success font-weight-bold">$1,000,500</strong></p>
+          <p><a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 btn-2">See Details</a></p>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+</div>
+
+
+<div class="site-section site-section-sm pb-0">
+  <div class="container">
+    <div class="row">
+      <form class="form-search col-md-12" style="margin-top: -100px;">
+        <div class="row  align-items-end">
+          <div class="col-md-3">
+            <label for="list-types">Listing Types</label>
+            <div class="select-wrap">
+              <span class="icon icon-arrow_drop_down"></span>
+              <select name="list-types" id="list-types" class="form-control d-block rounded-0">
+                <option value="">Condo</option>
+                <option value="">Commercial Building</option>
+                <option value="">Land Property</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="offer-types">Offer Type</label>
+            <div class="select-wrap">
+              <span class="icon icon-arrow_drop_down"></span>
+              <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+                <option value="">For Sale</option>
+                <option value="">For Rent</option>
+                <option value="">For Lease</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="select-city">Select City</label>
+            <div class="select-wrap">
+              <span class="icon icon-arrow_drop_down"></span>
+              <select name="select-city" id="select-city" class="form-control d-block rounded-0">
+                <option value="">New York</option>
+                <option value="">Brooklyn</option>
+                <option value="">London</option>
+                <option value="">Japan</option>
+                <option value="">Philippines</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <input type="submit" class="btn btn-success text-white btn-block rounded-0" value="Search">
+          </div>
+        </div>
+      </form>
+    </div>  
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="view-options bg-white py-3 px-3 d-md-flex align-items-center">
+          <div class="mr-auto">
+            <a href="index.html" class="icon-view view-module active"><span class="icon-view_module"></span></a>
+            <a href="view-list.html" class="icon-view view-list"><span class="icon-view_list"></span></a>
+            
+          </div>
+          <div class="ml-auto d-flex align-items-center">
+            <div>
+              <a href="#" class="view-list px-3 border-right active">All</a>
+              <a href="#" class="view-list px-3 border-right">Rent</a>
+              <a href="#" class="view-list px-3">Sale</a>
+            </div>
+
+
+            <div class="select-wrap">
+              <span class="icon icon-arrow_drop_down"></span>
+              <select class="form-control form-control-sm d-block rounded-0">
+                <option value="">Sort by</option>
+                <option value="">Price Ascending</option>
+                <option value="">Price Descending</option>
+              </select>
             </div>
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-2.jpg)">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345</p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Rino
-                      <br> Venda Road Five</h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
+    </div>
+   
+  </div>
+</div>
+
+<div class="site-section site-section-sm bg-light">
+  <div class="container">
+  
+    <div class="row mb-5">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="property-entry h-100">
+          <a href="property-details.html" class="property-thumbnail">
+            <div class="offer-type-wrap">
+              <span class="offer-type bg-danger">Sale</span>
+              <span class="offer-type bg-success">Rent</span>
             </div>
+            <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+          </a>
+          <div class="p-4 property-body">
+            <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+            <h2 class="property-title"><a href="property-details.html">625 S. Berendo St</a></h2>
+            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 625 S. Berendo St Unit 607 Los Angeles, CA 90005</span>
+            <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0">
+              <li>
+                <span class="property-specs">Beds</span>
+                <span class="property-specs-number">2 <sup>+</sup></span>
+                
+              </li>
+              <li>
+                <span class="property-specs">Baths</span>
+                <span class="property-specs-number">2</span>
+                
+              </li>
+              <li>
+                <span class="property-specs">SQ FT</span>
+                <span class="property-specs-number">7,000</span>
+                
+              </li>
+            </ul>
+
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-3.jpg)">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345</p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Alira
-                      <br> Roan Road One</h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="property-entry h-100">
+          <a href="property-details.html" class="property-thumbnail">
+            <div class="offer-type-wrap">
+              <span class="offer-type bg-danger">Sale</span>
+              <span class="offer-type bg-success">Rent</span>
             </div>
+            <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+          </a>
+          <div class="p-4 property-body">
+            <a href="#" class="property-favorite active"><span class="icon-heart-o"></span></a>
+            <h2 class="property-title"><a href="property-details.html">871 Crenshaw Blvd</a></h2>
+            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 1 New York Ave, Warners Bay, NSW 2282</span>
+            <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0">
+              <li>
+                <span class="property-specs">Beds</span>
+                <span class="property-specs-number">2 <sup>+</sup></span>
+                
+              </li>
+              <li>
+                <span class="property-specs">Baths</span>
+                <span class="property-specs-number">2</span>
+                
+              </li>
+              <li>
+                <span class="property-specs">SQ FT</span>
+                <span class="property-specs-number">1,620</span>
+                
+              </li>
+            </ul>
+
           </div>
         </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="property-entry h-100">
+          <a href="property-details.html" class="property-thumbnail">
+            <div class="offer-type-wrap">
+              <span class="offer-type bg-info">Lease</span>
+            </div>
+            <img src="images/img_3.jpg" alt="Image" class="img-fluid">
+          </a>
+          <div class="p-4 property-body">
+            <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+            <h2 class="property-title"><a href="property-details.html">853 S Lucerne Blvd</a></h2>
+            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 853 S Lucerne Blvd Unit 101 Los Angeles, CA 90005</span>
+            <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0">
+              <li>
+                <span class="property-specs">Beds</span>
+                <span class="property-specs-number">2 <sup>+</sup></span>
+                
+              </li>
+              <li>
+                <span class="property-specs">Baths</span>
+                <span class="property-specs-number">2</span>
+                
+              </li>
+              <li>
+                <span class="property-specs">SQ FT</span>
+                <span class="property-specs-number">5,500</span>
+                
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="property-entry h-100">
+          <a href="property-details.html" class="property-thumbnail">
+            <div class="offer-type-wrap">
+              <span class="offer-type bg-danger">Sale</span>
+              <span class="offer-type bg-success">Rent</span>
+            </div>
+            <img src="images/img_4.jpg" alt="Image" class="img-fluid">
+          </a>
+          <div class="p-4 property-body">
+            <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+            <h2 class="property-title"><a href="property-details.html">625 S. Berendo St</a></h2>
+            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 625 S. Berendo St Unit 607 Los Angeles, CA 90005</span>
+            <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0">
+              <li>
+                <span class="property-specs">Beds</span>
+                <span class="property-specs-number">2 <sup>+</sup></span>
+                
+              </li>
+              <li>
+                <span class="property-specs">Baths</span>
+                <span class="property-specs-number">2</span>
+                
+              </li>
+              <li>
+                <span class="property-specs">SQ FT</span>
+                <span class="property-specs-number">7,000</span>
+                
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="property-entry h-100">
+          <a href="property-details.html" class="property-thumbnail">
+            <div class="offer-type-wrap">
+              <span class="offer-type bg-danger">Sale</span>
+              <span class="offer-type bg-success">Rent</span>
+            </div>
+            <img src="images/img_5.jpg" alt="Image" class="img-fluid">
+          </a>
+          <div class="p-4 property-body">
+            <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+            <h2 class="property-title"><a href="property-details.html">871 Crenshaw Blvd</a></h2>
+            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 1 New York Ave, Warners Bay, NSW 2282</span>
+            <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0">
+              <li>
+                <span class="property-specs">Beds</span>
+                <span class="property-specs-number">2 <sup>+</sup></span>
+                
+              </li>
+              <li>
+                <span class="property-specs">Baths</span>
+                <span class="property-specs-number">2</span>
+                
+              </li>
+              <li>
+                <span class="property-specs">SQ FT</span>
+                <span class="property-specs-number">1,620</span>
+                
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="property-entry h-100">
+          <a href="property-details.html" class="property-thumbnail">
+            <div class="offer-type-wrap">
+              <span class="offer-type bg-info">Lease</span>
+            </div>
+            <img src="images/img_6.jpg" alt="Image" class="img-fluid">
+          </a>
+          <div class="p-4 property-body">
+            <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+            <h2 class="property-title"><a href="property-details.html">853 S Lucerne Blvd</a></h2>
+            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 853 S Lucerne Blvd Unit 101 Los Angeles, CA 90005</span>
+            <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0">
+              <li>
+                <span class="property-specs">Beds</span>
+                <span class="property-specs-number">2 <sup>+</sup></span>
+                
+              </li>
+              <li>
+                <span class="property-specs">Baths</span>
+                <span class="property-specs-number">2</span>
+                
+              </li>
+              <li>
+                <span class="property-specs">SQ FT</span>
+                <span class="property-specs-number">5,500</span>
+                
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="property-entry h-100">
+          <a href="property-details.html" class="property-thumbnail">
+            <div class="offer-type-wrap">
+              <span class="offer-type bg-danger">Sale</span>
+              <span class="offer-type bg-success">Rent</span>
+            </div>
+            <img src="images/img_7.jpg" alt="Image" class="img-fluid">
+          </a>
+          <div class="p-4 property-body">
+            <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+            <h2 class="property-title"><a href="property-details.html">625 S. Berendo St</a></h2>
+            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 625 S. Berendo St Unit 607 Los Angeles, CA 90005</span>
+            <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0">
+              <li>
+                <span class="property-specs">Beds</span>
+                <span class="property-specs-number">2 <sup>+</sup></span>
+                
+              </li>
+              <li>
+                <span class="property-specs">Baths</span>
+                <span class="property-specs-number">2</span>
+                
+              </li>
+              <li>
+                <span class="property-specs">SQ FT</span>
+                <span class="property-specs-number">7,000</span>
+                
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="property-entry h-100">
+          <a href="property-details.html" class="property-thumbnail">
+            <div class="offer-type-wrap">
+              <span class="offer-type bg-danger">Sale</span>
+              <span class="offer-type bg-success">Rent</span>
+            </div>
+            <img src="images/img_8.jpg" alt="Image" class="img-fluid">
+          </a>
+          <div class="p-4 property-body">
+            <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+            <h2 class="property-title"><a href="property-details.html">871 Crenshaw Blvd</a></h2>
+            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 1 New York Ave, Warners Bay, NSW 2282</span>
+            <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0">
+              <li>
+                <span class="property-specs">Beds</span>
+                <span class="property-specs-number">2 <sup>+</sup></span>
+                
+              </li>
+              <li>
+                <span class="property-specs">Baths</span>
+                <span class="property-specs-number">2</span>
+                
+              </li>
+              <li>
+                <span class="property-specs">SQ FT</span>
+                <span class="property-specs-number">1,620</span>
+                
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="property-entry h-100">
+          <a href="property-details.html" class="property-thumbnail">
+            <div class="offer-type-wrap">
+              <span class="offer-type bg-info">Lease</span>
+            </div>
+            <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+          </a>
+          <div class="p-4 property-body">
+            <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+            <h2 class="property-title"><a href="property-details.html">853 S Lucerne Blvd</a></h2>
+            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 853 S Lucerne Blvd Unit 101 Los Angeles, CA 90005</span>
+            <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0">
+              <li>
+                <span class="property-specs">Beds</span>
+                <span class="property-specs-number">2 <sup>+</sup></span>
+                
+              </li>
+              <li>
+                <span class="property-specs">Baths</span>
+                <span class="property-specs-number">2</span>
+                
+              </li>
+              <li>
+                <span class="property-specs">SQ FT</span>
+                <span class="property-specs-number">5,500</span>
+                
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="site-pagination">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <span>...</span>
+          <a href="#">10</a>
+        </div>
+      </div>  
+    </div>
+    
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-7 text-center">
+        <div class="site-section-title">
+          <h2>Why Choose Us?</h2>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi, pariatur corporis, eaque, deleniti cupiditate officia.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <a href="#" class="service text-center">
+          <span class="icon flaticon-house"></span>
+          <h2 class="service-heading">Research Subburbs</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
+          <p><span class="read-more">Read More</span></p>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a href="#" class="service text-center">
+          <span class="icon flaticon-sold"></span>
+          <h2 class="service-heading">Sold Houses</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
+          <p><span class="read-more">Read More</span></p>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a href="#" class="service text-center">
+          <span class="icon flaticon-camera"></span>
+          <h2 class="service-heading">Security Priority</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
+          <p><span class="read-more">Read More</span></p>
+        </a>
       </div>
     </div>
   </div>
-  <!--/ Carousel end /-->
+</div>
 
-  <!--/ Services Star /-->
-  <section class="section-services section-t8">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title-wrap d-flex justify-content-between">
-            <div class="title-box">
-              <h2 class="title-a">Our Services</h2>
-            </div>
-          </div>
+<div class="site-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-7 text-center">
+        <div class="site-section-title">
+          <h2>Recent Blog</h2>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card-box-c foo">
-            <div class="card-header-c d-flex">
-              <div class="card-box-ico">
-                <span class="fa fa-gamepad"></span>
-              </div>
-              <div class="card-title-c align-self-center">
-                <h2 class="title-c">Lifestyle</h2>
-              </div>
-            </div>
-            <div class="card-body-c">
-              <p class="content-c">
-                Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                convallis a pellentesque
-                nec, egestas non nisi.
-              </p>
-            </div>
-            <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-c foo">
-            <div class="card-header-c d-flex">
-              <div class="card-box-ico">
-                <span class="fa fa-usd"></span>
-              </div>
-              <div class="card-title-c align-self-center">
-                <h2 class="title-c">Loans</h2>
-              </div>
-            </div>
-            <div class="card-body-c">
-              <p class="content-c">
-                Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
-                aliquet elit, eget tincidunt
-                nibh pulvinar a.
-              </p>
-            </div>
-            <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-c foo">
-            <div class="card-header-c d-flex">
-              <div class="card-box-ico">
-                <span class="fa fa-home"></span>
-              </div>
-              <div class="card-title-c align-self-center">
-                <h2 class="title-c">Sell</h2>
-              </div>
-            </div>
-            <div class="card-body-c">
-              <p class="content-c">
-                Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                convallis a pellentesque
-                nec, egestas non nisi.
-              </p>
-            </div>
-            <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div>
-          </div>
-        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi, pariatur corporis, eaque, deleniti cupiditate officia.</p>
       </div>
     </div>
-  </section>
-  <!--/ Services End /-->
-
-  <!--/ Property Star /-->
-  <section class="section-property section-t8">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title-wrap d-flex justify-content-between">
-            <div class="title-box">
-              <h2 class="title-a">Destacadas</h2>
-            </div>
-            <div class="title-link">
-              <a href="property-grid.html">Todas la propiedades
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div>
-          </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+        <a href="#"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
+        <div class="p-4 bg-white">
+          <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
+          <h2 class="h5 text-black mb-3"><a href="#">Art Gossip by Mike Charles</a></h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt.</p>
         </div>
       </div>
-      <div id="property-carousel" class="owl-carousel owl-theme">
-
-        <% ofertatres.forEach(function (ofertaun) { %>
-        <div class="carousel-item-b">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-                <a href="property-single.html">
-              <img src="<%= ofertaun.image %>" alt="" class="img-a img-fluid">
-              </a>
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="property-single.html"><%= ofertaun.title %>
-                      <br /> Olive Road Two</a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent | $ <%= ofertaun.price %></span>
-                  </div>
-                  <a href="#" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>340m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+        <a href="#"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
+        <div class="p-4 bg-white">
+          <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
+          <h2 class="h5 text-black mb-3"><a href="#">Art Gossip by Mike Charles</a></h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt.</p>
         </div>
-        <% }) %>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="300">
+        <a href="#"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
+        <div class="p-4 bg-white">
+          <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
+          <h2 class="h5 text-black mb-3"><a href="#">Art Gossip by Mike Charles</a></h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt.</p>
+        </div>
+      </div>
 
-        
+    </div>
 
-        
-                
-                  
+  </div>
+</div>
+
+
+<div class="site-section">
+<div class="container">
+  <div class="row mb-5 justify-content-center">
+    <div class="col-md-7">
+      <div class="site-section-title text-center">
+        <h2>Our Agents</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum pariatur labore fugit amet eaque iure vitae, repellendus laborum in modi reiciendis quis! Optio minima quibusdam, laboriosam.</p>
       </div>
     </div>
-  </section>
-  <!--/ Property End /-->
+  </div>
+  <div class="row">
+      <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+        <div class="team-member">
 
-  <!--/ Agents Star /-->
-  <section class="section-agents section-t8">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title-wrap d-flex justify-content-between">
-            <div class="title-box">
-              <h2 class="title-a">Best Agents</h2>
-            </div>
-            <div class="title-link">
-              <a href="agents-grid.html">All Agents
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div>
+          <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded mb-4">
+
+          <div class="text">
+
+            <h2 class="mb-2 font-weight-light text-black h4">Megan Smith</h2>
+            <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. Totam atque corporis nisi, veniam non. Tempore cupiditate, vitae minus obcaecati provident beatae!</p>
+            <p>
+              <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
+              <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
+              <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
+            </p>
           </div>
+
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-4.jpg" alt="" class="img-d img-fluid">
-            </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="agent-single.html" class="link-two">Margaret Sotillo
-                      <br> Escala</a>
-                  </h3>
-                </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                  Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +54 356 945234</p>
-                  <p>
-                    <strong>Email: </strong> agents@example.com</p>
-                </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+
+      <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+        <div class="team-member">
+
+          <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded mb-4">
+
+          <div class="text">
+
+            <h2 class="mb-2 font-weight-light text-black h4">Brooke Cagle</h2>
+            <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cumque vitae voluptates culpa earum similique corrupti itaque veniam doloribus amet perspiciatis recusandae sequi nihil tenetur ad, modi quos id magni!</p>
+            <p>
+              <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
+              <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
+              <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
+            </p>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-1.jpg" alt="" class="img-d img-fluid">
-            </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="agent-single.html" class="link-two">Stiven Spilver
-                      <br> Darw</a>
-                  </h3>
-                </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                  Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +54 356 945234</p>
-                  <p>
-                    <strong>Email: </strong> agents@example.com</p>
-                </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-5.jpg" alt="" class="img-d img-fluid">
-            </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="agent-single.html" class="link-two">Emma Toledo
-                      <br> Cascada</a>
-                  </h3>
-                </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                  Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +54 356 945234</p>
-                  <p>
-                    <strong>Email: </strong> agents@example.com</p>
-                </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
+
+      <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+        <div class="team-member">
+
+          <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded mb-4">
+
+          <div class="text">
+
+            <h2 class="mb-2 font-weight-light text-black h4">Philip Martin</h2>
+            <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores illo iusto, inventore, iure dolorum officiis modi repellat nobis, praesentium perspiciatis, explicabo. Atque cupiditate, voluptates pariatur odit officia libero veniam quo.</p>
+            <p>
+              <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
+              <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
+              <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      
+
     </div>
-  </section>
-  <!--/ Agents End /-->
-
-  <!--/ News Star /-->
-  <!-- <section class="section-news section-t8">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title-wrap d-flex justify-content-between">
-            <div class="title-box">
-              <h2 class="title-a">Latest News</h2>
-            </div>
-            <div class="title-link">
-              <a href="blog-grid.html">All News
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="new-carousel" class="owl-carousel owl-theme">
-        <div class="carousel-item-c">
-          <div class="card-box-b card-shadow news-box">
-            <div class="img-box-b">
-              <img src="img/post-2.jpg" alt="" class="img-b img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-header-b">
-                <div class="card-category-b">
-                  <a href="#" class="category-b">House</a>
-                </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="blog-single.html">House is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">18 Sep. 2017</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-c">
-          <div class="card-box-b card-shadow news-box">
-            <div class="img-box-b">
-              <img src="img/post-5.jpg" alt="" class="img-b img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-header-b">
-                <div class="card-category-b">
-                  <a href="#" class="category-b">Travel</a>
-                </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="blog-single.html">Travel is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">18 Sep. 2017</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-c">
-          <div class="card-box-b card-shadow news-box">
-            <div class="img-box-b">
-              <img src="img/post-7.jpg" alt="" class="img-b img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-header-b">
-                <div class="card-category-b">
-                  <a href="#" class="category-b">Park</a>
-                </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="blog-single.html">Park is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">18 Sep. 2017</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-c">
-          <div class="card-box-b card-shadow news-box">
-            <div class="img-box-b">
-              <img src="img/post-3.jpg" alt="" class="img-b img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-header-b">
-                <div class="card-category-b">
-                  <a href="#" class="category-b">Travel</a>
-                </div>
-                <div class="card-title-b">
-                  <h2 class="title-2">
-                    <a href="#">Travel is comming
-                      <br> new</a>
-                  </h2>
-                </div>
-                <div class="card-date">
-                  <span class="date-b">18 Sep. 2017</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!--/ News End /-->
-
-  <!--/ Testimonials Star /-->
-  <section class="section-testimonials section-t8 nav-arrow-a">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title-wrap d-flex justify-content-between">
-            <div class="title-box">
-              <h2 class="title-a">Testimonials</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="testimonial-carousel" class="owl-carousel owl-arrow">
-        <div class="carousel-item-a">
-          <div class="testimonials-box">
-            <div class="row">
-              <div class="col-sm-12 col-md-6">
-                <div class="testimonial-img">
-                  <img src="img/testimonial-1.jpg" alt="" class="img-fluid">
-                </div>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <div class="testimonial-ico">
-                  <span class="ion-ios-quote"></span>
-                </div>
-                <div class="testimonials-content">
-                  <p class="testimonial-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                    debitis hic ber quibusdam
-                    voluptatibus officia expedita corpori.
-                  </p>
-                </div>
-                <div class="testimonial-author-box">
-                  <img src="img/mini-testimonial-1.jpg" alt="" class="testimonial-avatar">
-                  <h5 class="testimonial-author">Albert & Erika</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item-a">
-          <div class="testimonials-box">
-            <div class="row">
-              <div class="col-sm-12 col-md-6">
-                <div class="testimonial-img">
-                  <img src="img/testimonial-2.jpg" alt="" class="img-fluid">
-                </div>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <div class="testimonial-ico">
-                  <span class="ion-ios-quote"></span>
-                </div>
-                <div class="testimonials-content">
-                  <p class="testimonial-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                    debitis hic ber quibusdam
-                    voluptatibus officia expedita corpori.
-                  </p>
-                </div>
-                <div class="testimonial-author-box">
-                  <img src="img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                  <h5 class="testimonial-author">Pablo & Emma</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--/ Testimonials End /-->
-
-  <!--/ footer Star /-->
-  <section class="section-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-4">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">EstateAgency</h3>
-            </div>
-            <div class="w-body-a">
-              <p class="w-text-a color-text-a">
-                Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis
-                sed aute irure.
-              </p>
-            </div>
-            <div class="w-footer-a">
-              <ul class="list-unstyled">
-                <li class="color-a">
-                  <span class="color-text-a">Phone .</span> contact@example.com</li>
-                <li class="color-a">
-                  <span class="color-text-a">Email .</span> +54 356 945234</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">The Company</h3>
-            </div>
-            <div class="w-body-a">
-              <div class="w-body-a">
-                <ul class="list-unstyled">
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Site Map</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Legal</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Agent Admin</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Careers</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Affiliate</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Privacy Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">International sites</h3>
-            </div>
-            <div class="w-body-a">
-              <ul class="list-unstyled">
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Venezuela</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">China</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Hong Kong</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Argentina</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Singapore</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Philippines</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
+</div>
+</div>
 
 
 
