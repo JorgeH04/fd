@@ -21,7 +21,7 @@ const { isAuthenticated } = require('../helpers/auth');
 
 
 
-router.get('/puntocomapedidos/:page', async (req, res) => {
+router.get('/realinmob/:page', async (req, res) => {
 
   const totalpedidos = await Order.countDocuments({})
 
@@ -301,7 +301,7 @@ router.get('/users/backend', async (req, res) => {
 });  
  
 
-router.get('/mokacactuspanel', async (req, res) => {
+router.get('/realinmob', async (req, res) => {
   const users = await User.find();
   res.render('users/dashboard', { users});
   

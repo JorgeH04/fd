@@ -1,227 +1,127 @@
 <% include ../partials/_header %>
 
 
-  <!--/ Intro Single star /-->
-  <section class="intro-single">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-lg-8">
-          <div class="title-single-box">
-            <h1 class="title-single">Our Amazing Properties</h1>
-            <span class="color-text-a">Grid Properties</span>
-          </div>
-        </div>
-        <div class="col-md-12 col-lg-4">
-          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="#">Home</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Properties Grid
-              </li>
-            </ol>
-          </nav>
+
+<div class="slide-one-item home-slider owl-carousel"  >
+
+    <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-10">
+             <h1 class="mb-2">Propiedades a la venta</h1>
+           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!--/ Intro Single End /-->
+    </div>  
 
-  <!--/ Property Grid Star /-->
-  <section class="property-grid grid">
-    <div class="container">
+   
+
+  </div>
+
+
+
+
       <div class="row">
-        <div class="col-sm-12">
-          <div class="grid-option">
-            <form>
-              <select class="custom-select">
-                <option selected> Filtro por precio </option>
-                <option value="1"></option>
-                <option value="2"> </option>
-                <option value="3"> </option>
-              </select>
-            </form>
+        <div class="col-md-12">
+          <div class="view-options bg-white py-3 px-3 d-md-flex align-items-center">
+            <div class="mr-auto">
+              <a href="index.html" class="icon-view view-module active"><span class="icon-view_module"></span></a>
+              <a href="view-list.html" class="icon-view view-list"><span class="icon-view_list"></span></a>
+              
+            </div>
+            <div class="ml-auto d-flex align-items-center">
+              <div>
+                <a href="#" class="view-list px-3 border-right active">All</a>
+                <a href="#" class="view-list px-3 border-right">Rent</a>
+                <a href="#" class="view-list px-3">Sale</a>
+              </div>
+
+
+              <div class="select-wrap">
+                <span class="icon icon-arrow_drop_down"></span>
+                <select class="form-control form-control-sm d-block rounded-0">
+                  <option value="">Sort by</option>
+                  <option value="">Price Ascending</option>
+                  <option value="">Price Descending</option>
+                </select>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+     
+    </div>
+  </div>
+
+
+<div class="site-section site-section-sm bg-light">
+    <div class="container">
+    
+      <div class="row mb-5">
 
         
-
+ 
+        
 
         <% produno.forEach(function (produn) { %>
-        <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <a href="/venta-detalles/<%= produn.id %>">
-              <img src="<%= produn.image %>" alt="" class="img-a img-fluid">
-             </a>
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#"><%= produn.title %>
-                      <br /> Olive Road Two</a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent | $ <%= produn.price %></span>
-                  </div>
-                  <a href="/venta-detalles/<%= produn.id %>" class="link-a">ver
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>340m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
-                    </li>
-                  </ul>
-                </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="property-entry h-100">
+            <a href="/venta-detalles/<%= produn.id %>" class="property-thumbnail">
+              <div class="offer-type-wrap">
+                <span class="offer-type bg-danger">Sale</span>
+                <span class="offer-type bg-success">Rent</span>
               </div>
+              <img src="<%= produn.imageuno %>" alt="Image" class="img-fluid">
+            </a>
+           
+            <div class="p-4 property-body">
+              <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+              <h2 class="property-title"><a href="property-details.html">871 Crenshaw Blvd</a></h2>
+              <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 1 New York Ave, Warners Bay, NSW 2282</span>
+              <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+              <ul class="property-specs-wrap mb-3 mb-lg-0">
+                <li>
+                  <span class="property-specs">Beds</span>
+                  <span class="property-specs-number">2 <sup>+</sup></span>
+                  
+                </li>
+                <li>
+                  <span class="property-specs">Baths</span>
+                  <span class="property-specs-number">2</span>
+                  
+                </li>
+                <li>
+                  <span class="property-specs">SQ FT</span>
+                  <span class="property-specs-number">1,620</span>
+                  
+                </li>
+              </ul>
+
             </div>
           </div>
         </div>
         <% }) %>
 
 
-     
-        
       </div>
       <div class="row">
-        <div class="col-sm-12">
-          <nav class="pagination-a">
-            <ul class="pagination justify-content-end">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1">
-                  <span class="ion-ios-arrow-back"></span>
-                </a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">1</a>
-              </li>
-              <li class="page-item active">
-                <a class="page-link" href="#">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">3</a>
-              </li>
-              <li class="page-item next">
-                <a class="page-link" href="#">
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <div class="col-md-12 text-center">
+          <div class="site-pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <span>...</span>
+            <a href="#">10</a>
+          </div>
+        </div>  
       </div>
+      
     </div>
-  </section>
-  <!--/ Property Grid End /-->
+  </div>
 
-  <!--/ footer Star /-->
-  <section class="section-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-4">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">EstateAgency</h3>
-            </div>
-            <div class="w-body-a">
-              <p class="w-text-a color-text-a">
-                Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis
-                sed aute irure.
-              </p>
-            </div>
-            <div class="w-footer-a">
-              <ul class="list-unstyled">
-                <li class="color-a">
-                  <span class="color-text-a">Phone .</span> contact@example.com</li>
-                <li class="color-a">
-                  <span class="color-text-a">Email .</span> +54 356 945234</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">The Company</h3>
-            </div>
-            <div class="w-body-a">
-              <div class="w-body-a">
-                <ul class="list-unstyled">
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Site Map</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Legal</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Agent Admin</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Careers</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Affiliate</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Privacy Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">International sites</h3>
-            </div>
-            <div class="w-body-a">
-              <ul class="list-unstyled">
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Venezuela</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">China</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Hong Kong</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Argentina</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Singapore</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Philippines</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
 
 			<% include ../partials/_footer %>
