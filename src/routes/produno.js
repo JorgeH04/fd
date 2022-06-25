@@ -36,9 +36,9 @@ const path = require('path');
 const { unlink } = require('fs-extra');
 const cloudinary = require('cloudinary');
 cloudinary.config({
-  cloud_name:'dsk4fft6r',
-  api_key:'168297322199897',
-  api_secret:'nHp3wKpofJIeNm2AlVFf9PgseZk'
+  cloud_name:'dernadqrq',
+  api_key:'241274546791763',
+  api_secret:'EnOvxHpFoTKSdfDybes9Po6OoPI'
   
 });
 
