@@ -48,7 +48,7 @@ router.post('/ofertauno/new-ofertauno',  async (req, res) => {
   // await unlink(respdos[1])
   // await unlink(resptres[2])
 
-  res.redirect('/ofertatresback/1');
+  res.redirect('/ofertaunoback/1');
  
    }catch(err){
        console.log(err)
