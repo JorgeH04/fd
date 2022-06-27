@@ -22,7 +22,7 @@ cloudinary.config({
 
 
 router.post('/proddos/new-proddos',   async (req, res) => {
-  const { name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
+  const { name, title, filtro, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
 
    try {
     // console.log(req.files)
@@ -32,7 +32,7 @@ router.post('/proddos/new-proddos',   async (req, res) => {
        
    const newNote = new Proddos({ 
  
-    name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice,
+    name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, filtro,
     description,
     imageuno:resp.url,
     imagedos:respdos.url,

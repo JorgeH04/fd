@@ -130,7 +130,7 @@ router.get('/produno/delete/:id', async (req, res) => {
 
 
 router.post('/produno/new-produno',  async (req, res) => {
-  const { name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
+  const { name, title, filtro, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
 
   try {
     // console.log(req.files)
@@ -140,7 +140,7 @@ router.post('/produno/new-produno',  async (req, res) => {
        
    const newNote = new Produno({ 
  
-    name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice,
+    name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, filtro,
     imageuno:resp.url,
     imagedos:respdos.url,
     imagetres:resptres.url,
