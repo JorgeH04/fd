@@ -11,9 +11,18 @@ const { isAuthenticated } = require('../helpers/auth');
 
 
 
+const path = require('path');
+const { unlink } = require('fs-extra');
+const cloudinary = require('cloudinary');
+cloudinary.config({
+  cloud_name:'dernadqrq',
+  api_key:'241274546791763',
+  api_secret:'EnOvxHpFoTKSdfDybes9Po6OoPI'
+  
+});
 
 
-router.post('/ofertatres/new-ofertatres',   async (req, res) => {
+router.post('/ofertauno/new-ofertauno',  async (req, res) => {
   const { name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
 
    try {
@@ -22,7 +31,7 @@ router.post('/ofertatres/new-ofertatres',   async (req, res) => {
    const respdos = await cloudinary.v2.uploader.upload(req.files[1].path)
    const resptres = await cloudinary.v2.uploader.upload(req.files[2].path)
        
-   const newNote = new Proddos({ 
+   const newNote = new Ofertauno({ 
  
     name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice,
     description,

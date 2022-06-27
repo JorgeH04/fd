@@ -11,8 +11,14 @@ const Order = require('../models/order');
 const Cartdolar = require('../models/cartdolar');
 // Helpers
 const { isAuthenticated } = require('../helpers/auth');
-const cloudinary = require('cloudinary');
-
+ 
+ const cloudinary = require('cloudinary');
+cloudinary.config({
+  cloud_name:'dernadqrq',
+  api_key:'241274546791763',
+  api_secret:'EnOvxHpFoTKSdfDybes9Po6OoPI'
+  
+});
 
 
 router.post('/proddos/new-proddos',   async (req, res) => {
