@@ -23,10 +23,8 @@
 
 <body>
 
-        <a href="/produnoback/1" class="btn btn-primary " type="submit">
-            volver a inicio
-          </a>
-
+    
+  
 
 
 
@@ -42,12 +40,14 @@
           <input type="hidden" name="_method" value="PUT">
          
 
-          
-    <!--        <div class="form-group">
-              <input type="text" name="name" class="form-control" placeholder="name" value="<%= produno.name %>"  autofocus/>
-            </div>    -->   
+          <div class="form-group">
+              <input type="text" name="filtro" class="form-control" placeholder="Tipo" value="<%= produno.filtro %>"  autofocus/>
+            </div>           
            <div class="form-group">
-              <input type="text" name="title" class="form-control" placeholder="title" value="<%= produno.title %>" autofocus/>
+              <input type="text" name="name" class="form-control" placeholder="barrio" value="<%= produno.name %>"  autofocus/>
+            </div>   
+           <div class="form-group">
+              <input type="text" name="title" class="form-control" placeholder="calle" value="<%= produno.title %>" autofocus/>
             </div>
             <div class="form-group">
                 <input type="text" name="imageuno" class="form-control" placeholder="imagen 1" value="<%= produno.imageuno %>" autofocus/>
@@ -59,39 +59,35 @@
                 <input type="text" name="imagetres" class="form-control" placeholder="imagen 3" value="<%= produno.imagetres %>" autofocus/>
               </div>
               <div class="form-group">
-                <textarea type="text" name="description" class="form-control" placeholder="descripcion" ><%= produno.description %>" </textarea>
+                  <textarea type="text" name="description" class="form-control" placeholder="descripcion" ><%= produno.description %>" </textarea>
               </div>
               <div class="form-group">
-                <input type="text" name="enstock" class="form-control" placeholder="en stock?" value="<%= produno.enstock %>" autofocus/>
+                   <input type="text" name="enstock" class="form-control" placeholder="ambientes" value="<%= produno.enstock %>" autofocus/>
               </div>
               <div class="form-group">
-              <input type="text" name="price" class="form-control" placeholder="precio" value="<%= produno.price %>" autofocus/>
+                  <input type="text" name="oldprice" class="form-control" placeholder="antigüedad" value="<%= produno.oldprice %>" autofocus/>
+              </div>
+
+              <div class="form-group">
+                  <input type="text" name="color" class="form-control" placeholder="dormitorios" value="<%= produno.color %>" autofocus/>
               </div>
               <div class="form-group">
-                  <input type="text" name="oldprice" class="form-control" placeholder="precio anterior" value="<%= produno.oldprice %>" autofocus/>
+                   <input type="text" name="colorstock" class="form-control" placeholder="baños" value="<%= produno.colorstock %>" autofocus/>
               </div>
               <div class="form-group">
-                <input type="text" name="filtro" class="form-control" placeholder="filtro" value="<%= produno.filtro %>" autofocus/>
-            </div>
-  
-     <!--    <div class="form-group">
-                  <input type="text" name="color" class="form-control" placeholder="kg" value="<%= produno.color %>" autofocus/>
-              </div>
-            <div class="form-group">
-                  <input type="text" name="colorstock" class="form-control" placeholder="Texto 1" value="<%= produno.colorstock %>"  autofocus/>
-              </div>
+                  <input type="text" name="talle" class="form-control" placeholder="metros2" value="<%= produno.talle %>" autofocus/>
+             </div>
+             <div class="form-group">
+                <input type="text" name="amount" class="form-control" placeholder="aireac" value="<%= produno.amount %>" autofocus/>
+             </div>
+             <div class="form-group">
+                 <input type="text" name="dolarprice" class="form-control" placeholder="ascensor" value="<%= produno.dolarprice %>" autofocus/>
+             </div>
+
               <div class="form-group">
-                  <input type="text" name="talle" class="form-control" placeholder="Texto 2" value="<%= produno.talle %>"  autofocus/>
-              </div>     --> 
-              <div class="form-group"> 
-                <input type="text" name="dolarprice" class="form-control" placeholder="precio del dolar" value="<%= produno.dolarprice %>"  autofocus/>
-            </div>
-         <!--       <div class="form-group">
-                  <input type="text" name="tallestock" class="form-control" placeholder="talle stock" value="<%= produno.tallestock %>" autofocus/>
+                  <input type="text" name="price" class="form-control" placeholder="precio" value="<%= produno.price %>" autofocus/>
               </div>
-              <div class="form-group">
-                  <input type="text" name="filtroprice" class="form-control" placeholder="filtro de precio" value="<%= produno.filtroprice %>" autofocus/>
-              </div>     -->  
+ 
   
   
        

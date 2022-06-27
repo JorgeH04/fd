@@ -16,16 +16,17 @@ const cloudinary = require('cloudinary');
 
 
 router.post('/proddos/new-proddos',   async (req, res) => {
-  const { title, description, price} = req.body;
+  const { name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
 
-  try {
+   try {
     // console.log(req.files)
    const resp = await cloudinary.v2.uploader.upload(req.files[0].path)
    const respdos = await cloudinary.v2.uploader.upload(req.files[1].path)
    const resptres = await cloudinary.v2.uploader.upload(req.files[2].path)
        
    const newNote = new Proddos({ 
-    title,
+ 
+    name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice,
     description,
     imageuno:resp.url,
     imagedos:respdos.url,

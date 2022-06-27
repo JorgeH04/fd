@@ -130,7 +130,7 @@ router.get('/produno/delete/:id', async (req, res) => {
 
 
 router.post('/produno/new-produno',  async (req, res) => {
-  const { title, description, price} = req.body;
+  const { name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
 
   try {
     // console.log(req.files)
@@ -139,8 +139,8 @@ router.post('/produno/new-produno',  async (req, res) => {
    const resptres = await cloudinary.v2.uploader.upload(req.files[2].path)
        
    const newNote = new Produno({ 
-    title,
-    description,
+ 
+    name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice,
     imageuno:resp.url,
     imagedos:respdos.url,
     imagetres:resptres.url,
