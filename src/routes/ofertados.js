@@ -46,18 +46,12 @@ router.post('/ofertados/new-ofertados',  async (req, res) => {
   if (!image) {
     errors.push({text: 'Please Write a Title.'});
   }
-  if (!title) {
-    errors.push({text: 'Please Write a Description'});
-  }
-  if (!price) {
-    errors.push({text: 'Please Write a Description'});
-  }
+ 
   if (errors.length > 0) {
     res.render('notes/new-note', {
       errors,
       image,
-      title,
-      price
+     
     });
   } else {
     const newNote = new Ofertados({ 
