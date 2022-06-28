@@ -37,13 +37,14 @@
         <form action="/proddos/edit/<%= proddos._id %>" method="POST">
           <input type="hidden" name="_method" value="PUT">
          
-
-          
-    <!--         <div class="form-group">
-              <input type="text" name="name" class="form-control" placeholder="name" value="<%= proddos.name %>"  autofocus/>
-            </div>    --> 
+          <div class="form-group">
+              <input type="text" name="filtro" class="form-control" placeholder="Tipo" value="<%= proddos.filtro %>"  autofocus/>
+            </div>           
            <div class="form-group">
-              <input type="text" name="title" class="form-control" placeholder="title" value="<%= proddos.title %>" autofocus/>
+              <input type="text" name="name" class="form-control" placeholder="barrio" value="<%= proddos.name %>"  autofocus/>
+            </div>   
+           <div class="form-group">
+              <input type="text" name="title" class="form-control" placeholder="calle" value="<%= proddos.title %>" autofocus/>
             </div>
             <div class="form-group">
                 <input type="text" name="imageuno" class="form-control" placeholder="imagen 1" value="<%= proddos.imageuno %>" autofocus/>
@@ -55,39 +56,34 @@
                 <input type="text" name="imagetres" class="form-control" placeholder="imagen 3" value="<%= proddos.imagetres %>" autofocus/>
               </div>
               <div class="form-group">
-                <textarea type="text" name="description" class="form-control" placeholder="descripcion" ><%= proddos.description %>" </textarea>
+                  <textarea type="text" name="description" class="form-control" placeholder="descripcion" ><%= proddos.description %>" </textarea>
               </div>
               <div class="form-group">
-                <input type="text" name="enstock" class="form-control" placeholder="en stock?" value="<%= proddos.enstock %>" autofocus/>
+                   <input type="text" name="enstock" class="form-control" placeholder="ambientes" value="<%= proddos.enstock %>" autofocus/>
               </div>
               <div class="form-group">
-              <input type="text" name="price" class="form-control" placeholder="precio" value="<%= proddos.price %>" autofocus/>
+                  <input type="text" name="oldprice" class="form-control" placeholder="antigüedad" value="<%= proddos.oldprice %>" autofocus/>
               </div>
-              <div class="form-group">
-                  <input type="text" name="oldprice" class="form-control" placeholder="precio anterior" value="<%= proddos.oldprice %>" autofocus/>
-              </div>
-  
-   <!--              <div class="form-group">
-                  <input type="text" name="color" class="form-control" placeholder="kg" value="<%= proddos.color %>" autofocus/>
-              </div>
-            <div class="form-group">
-                  <input type="text" name="colorstock" class="form-control" placeholder="Texto 1" value="<%= proddos.colorstock %>"  autofocus/>
-              </div>
-              <div class="form-group">
-                  <input type="text" name="talle" class="form-control" placeholder="Texto 2" value="<%= proddos.talle %>"  autofocus/>
-              </div>
-          <div class="form-group">
-                  <input type="text" name="tallestock" class="form-control" placeholder="talle stock" value="<%= proddos.tallestock %>" autofocus/>
-              </div>
-              <div class="form-group">
-                  <input type="text" name="filtroprice" class="form-control" placeholder="filtro de precio" value="<%= proddos.filtroprice %>" autofocus/>
-              </div>  -->  
-  
-              <div class="form-group">
-                <input type="text" name="dolarprice" class="form-control" placeholder="precio del dolar" value="<%= proddos.dolarprice %>"  autofocus/>
-            </div>
 
+              <div class="form-group">
+                  <input type="text" name="color" class="form-control" placeholder="dormitorios" value="<%= proddos.color %>" autofocus/>
+              </div>
+              <div class="form-group">
+                   <input type="text" name="colorstock" class="form-control" placeholder="baños" value="<%= proddos.colorstock %>" autofocus/>
+              </div>
+              <div class="form-group">
+                  <input type="text" name="talle" class="form-control" placeholder="metros2" value="<%= proddos.talle %>" autofocus/>
+             </div>
+             <div class="form-group">
+                <input type="text" name="amount" class="form-control" placeholder="aireac" value="<%= proddos.amount %>" autofocus/>
+             </div>
+             <div class="form-group">
+                 <input type="text" name="dolarprice" class="form-control" placeholder="ascensor" value="<%= proddos.dolarprice %>" autofocus/>
+             </div>
 
+              <div class="form-group">
+                  <input type="text" name="price" class="form-control" placeholder="precio" value="<%= proddos.price %>" autofocus/>
+              </div>
           <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit">
               guardar
