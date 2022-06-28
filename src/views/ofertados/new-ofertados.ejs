@@ -77,17 +77,14 @@
                               <div class="col-12 bg-white text-center h-100 product-item">
                                   <div class="row h-100">
                                       <div class="col-12 p-0 mb-3">
-                                          <a href="/ofertadosredirect/<%= ofertado.id %>">
+                                          
                                               <img src="<%= ofertado.image %>" class="img-fluid">
-                                          </a>
+                               
                                       </div>
                                       <div class="col-12 mb-3">
-                                            <%= ofertado.title %> 
-                                      </div>
+                                       </div>
                                       <div class="col-12 mb-3">
-                                              <span class="product-price-old">
-                                                  $<%= ofertado.price %> 
-                                              </span>
+                                        
                                           
                                       </div>
                                      
@@ -97,9 +94,7 @@
                                     <a class="btn btn-primary" href="/ofertados/edit/<%= ofertado.id %>">
                                          Editar
                                     </a>
-                                    <form action="/pop/<%= ofertado.id %>" method="POST">
-                                        <button class="<%= ofertado.stock ? 'btn btn-success' : 'btn btn-primary' %>">Stock?</button>
-                                     </form>
+                                     
                                   </div>
                               </div>
                           </div>
