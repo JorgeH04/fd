@@ -38,10 +38,10 @@ const NoteSchema = new Schema({
   colorstock: String,
   talle: String,
   tallestock: String,
-  oldprice: Number, 
+  oldprice: String, 
   price: Number,
-  dolarprice: Number,
-  amount: Number,
+  dolarprice: String,
+  amount: String,
   like: {
     type: Boolean,
     default: false
