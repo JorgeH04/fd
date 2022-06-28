@@ -8,6 +8,13 @@ const NoteSchema = new Schema({
   imageuno: String,
   imagedos: String,
   imagetres: String,
+  imagecuatro: String,
+  imagecinco: String,
+  imageseis: String,
+  imagesiete: String,
+  imageocho: String,
+  imagenueve: String,
+  imagediez: String,
 
   path: String,
 

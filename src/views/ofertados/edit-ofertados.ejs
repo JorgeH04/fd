@@ -35,37 +35,14 @@
         <form action="/ofertados/edit/<%= ofertados._id %>" method="POST">
           <input type="hidden" name="_method" value="PUT">
  
-         <div class="form-group">
-            <input type="text" name="title" class="form-control" placeholder="title" value="<%= ofertados.title %>" autofocus/>
-          </div>
           <div class="form-group">
-              <input type="text" name="image" class="form-control" placeholder="imagen 1" value="<%= ofertados.image %>" autofocus/>
+              <input type="text" name="imageuno" class="form-control" placeholder="imagen 1" value="<%= ofertados.image %>" autofocus/>
             </div>
             <div class="form-group">
               <input type="text" name="imagedos" class="form-control" placeholder="imagen 2" value="<%= ofertados.imagedos %>" autofocus/>
             </div>
-            <div class="form-group">
-              <input type="text" name="imagetres" class="form-control" placeholder="imagen 3" value="<%= ofertados.imagetres %>" autofocus/>
-            </div>
-            <div class="form-group">
-              <textarea type="text" name="description" class="form-control" placeholder="descripcion" ><%= ofertados.description %>" </textarea>
-            </div>
-            <div class="form-group">
-              <input type="text" name="enstock" class="form-control" placeholder="en stock?" value="<%= ofertados.enstock %>" autofocus/>
-            </div>
-            <div class="form-group">
-            <input type="text" name="price" class="form-control" placeholder="precio" value="<%= ofertados.price %>" autofocus/>
-            </div>
-            <div class="form-group">
-                <input type="text" name="oldprice" class="form-control" placeholder="precio anterior" value="<%= ofertados.oldprice %>" autofocus/>
-            </div>
-
-      
-            <div class="form-group">
-              <input type="text" name="dolarprice" class="form-control" placeholder="precio del dolar" value="<%= ofertados.dolarprice %>"  autofocus/>
-          </div>
-
-
+         
+ 
 
 
           <div class="form-group">

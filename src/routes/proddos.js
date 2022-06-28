@@ -21,31 +21,43 @@ cloudinary.config({
 });
 
 
-router.post('/proddos/new-proddos',   async (req, res) => {
+ 
+
+
+
+
+
+router.post('/proddos/new-proddos',  async (req, res) => {
   const { name, title, filtro, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
 
-   try {
-    // console.log(req.files)
+  try {
    const resp = await cloudinary.v2.uploader.upload(req.files[0].path)
    const respdos = await cloudinary.v2.uploader.upload(req.files[1].path)
    const resptres = await cloudinary.v2.uploader.upload(req.files[2].path)
-       
+   const respcuatro = await cloudinary.v2.uploader.upload(req.files[3].path)
+   const respcinco = await cloudinary.v2.uploader.upload(req.files[4].path)
+   const respseis = await cloudinary.v2.uploader.upload(req.files[5].path)
+   const respsiete = await cloudinary.v2.uploader.upload(req.files[6].path)
+   const respocho = await cloudinary.v2.uploader.upload(req.files[7].path)
+   const respnueve = await cloudinary.v2.uploader.upload(req.files[8].path)
+   const respdiez = await cloudinary.v2.uploader.upload(req.files[9].path)
+
    const newNote = new Proddos({ 
  
     name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, filtro,
-    description,
     imageuno:resp.url,
     imagedos:respdos.url,
     imagetres:resptres.url,
+    imagecuatro:respcuatro.url,
+    imagecinco:respcinco.url,
+    imageseis:respseis.url,
+    imagesiete:respsiete.url,
+    imageocho:respocho.url,
+    imagenueve:respnueve.url,
+    imagediez:respdiez.url,
     price
-
-
   });
-  //newNote.user = req.user.id;
   await newNote.save();
-  // await unlink(resp[0])
-  // await unlink(respdos[1])
-  // await unlink(resptres[2])
 
   res.redirect('/proddosback/1');
  
@@ -53,6 +65,7 @@ router.post('/proddos/new-proddos',   async (req, res) => {
        console.log(err)
    }  
 });
+
 
 
 
