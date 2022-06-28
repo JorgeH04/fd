@@ -69,39 +69,6 @@ router.post('/proddos/new-proddos',  async (req, res) => {
 
 
 
-
-
-  
-// router.post('/proddos/new-proddos',   async (req, res) => {
-//   const proddos = new Proddos();  
-//   proddos.title = req.body.title;
-//   proddos.description = req.body.description;
-//   proddos.filenameuno = req.files.filenameuno;
-//   proddos.filenamedos = req.files.filenamedos;
-//   proddos.filenametres = req.files.filenametres;
-//   // proddos.imageuno = '/img/uploads/' + req.files[0].filename;
-//   // proddos.imagedos = '/img/uploads/' + req.files[1] || [0].filename;
-//   // proddos.imagetres = '/img/uploads/' + req.files[2] || [0].filename;
-//   proddos.imageuno = '/img/uploads/' + req.files[0].filename;
-//   proddos.imagedos = '/img/uploads/' + req.files[1].filename;
-//   proddos.imagetres = '/img/uploads/' + req.files[2].filename; 
-//   proddos.originalnameuno = req.files.originalnameuno;
-//   proddos.originalnamedos = req.files.originalnamedos;
-//   proddos.originalnametres = req.files.originalnametres;
-
-//   proddos.mimetype = req.files.mimetype;
-//   proddos.size = req.files.size;
-//   proddos.enstock = req.body.enstock;
-//   proddos.price = req.body.price;
-//   proddos.oldprice = req.body.oldprice;
-//   await proddos.save();
-//   console.log(proddos)
-//   res.redirect('/proddosback/1');
-// });
-
-
-
-
      
 
   router.get('/alquileres/:page', async (req, res) => {
@@ -131,93 +98,7 @@ router.post('/proddos/new-proddos',  async (req, res) => {
   });
   
   
-
-
-
-  // router.post('/proddos/new-proddos',  async (req, res) => {
-  //   const { 
-  //     name,
-  //     title,
-  //     image,
-  //     imagedos,
-  //     imagetres,
-  //     imagecuatro,
-  //     imagecinco,
-  //     description,
-  //     filtro,
-  //     enstock,
-  //     color,
-  //     coloruno,
-  //     colordos,
-  //     colortres,
-  //     colorcuatro,
-  //     talle,
-  //     talleuno,
-  //     talledos,
-  //     talletres,
-  //     tallecuatro,
-  //     tallecinco,
-  //     talleseis,
-  //     oldprice,
-  //     price,
-  //     dolarprice
-  //   } = req.body;
-  //   const errors = [];
-  //   if (!image) {
-  //     errors.push({text: 'Please Write a Title.'});
-  //   }
-  //   if (!title) {
-  //     errors.push({text: 'Please Write a Description'});
-  //   }
-  //   if (!price) {
-  //     errors.push({text: 'Please Write a Description'});
-  //   }
-  //   if (errors.length > 0) {
-  //     res.render('notes/new-note', {
-  //       errors,
-  //       image,
-  //       title,
-  //       price
-  //     });
-  //   } else {
-  //     const newNote = new Proddos({ 
-  //       name,
-  //       title,
-  //       image,
-  //       imagedos,
-  //       imagetres,
-  //       imagecuatro,
-  //       imagecinco,
-  //       description,
-  //       filtro,
-  //       enstock,
-  //       color,
-  //       coloruno,
-  //       colordos,
-  //       colortres,
-  //       colorcuatro,
-  //       talle,
-  //       talleuno,
-  //       talledos,
-  //       talletres,
-  //       tallecuatro,
-  //       tallecinco,
-  //       talleseis,
-  //       oldprice,
-  //       price,
-  //       dolarprice
-  //     });
-  //     //newNote.user = req.user.id;
-  //     await newNote.save();
-  //     req.flash('success_msg', 'Note Added Successfully');
-  //     res.redirect('/proddosback/:1');
-  //   }
-  // });
   
-
-
-
-
 
 
 router.get('/alquileres-detalles/:id', async (req, res) => {
