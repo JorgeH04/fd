@@ -51,25 +51,21 @@ router.post('/ofertatres/new-ofertatres',   async (req, res) => {
    try {
     // console.log(req.files)
    const resp = await cloudinary.v2.uploader.upload(req.files[0].path)
-   const respdos = await cloudinary.v2.uploader.upload(req.files[1].path)
-   const resptres = await cloudinary.v2.uploader.upload(req.files[2].path)
+ 
        
    const newNote = new Ofertatres({ 
  
     name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice,
     description,
     imageuno:resp.url,
-    imagedos:respdos.url,
-    imagetres:resptres.url,
+ 
     price
 
 
   });
   //newNote.user = req.user.id;
   await newNote.save();
-  // await unlink(resp[0])
-  // await unlink(respdos[1])
-  // await unlink(resptres[2])
+ 
 
   res.redirect('/ofertatresback/1');
  

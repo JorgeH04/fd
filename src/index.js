@@ -1,6 +1,6 @@
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
-}     
+}      
  
 const multer = require('multer');
 const  uuid  = require('uuid/v4');
@@ -69,7 +69,7 @@ app.use(multer({ storage: storage }).array('files', 12))
 
 //var uploadMultiple = upload.fields([{ name: 'file1', maxCount: 10 }, { name: 'file2', maxCount: 10 }])
 
-// app.use(multer({storage}).single('file'));
+ // app.use(multer({storage}).single('file'));
 // app.use(multer({storage}).single('imagedos'));
   
 app.use(session({
