@@ -31,13 +31,13 @@
 <div class="col-md-4 mx-auto">
     <div class="card text-center">
       <div class="card-header">
-        <h3>Agregue una nueva vivienda</h3>
+        <h3>Agregue un agente </h3>
       </div>
       <div class="card-body">
         <form action="/ofertatres/new-ofertatres" method="POST" enctype="multipart/form-data">
        
            <div class="form-group">
-            <input type="text" name="title" class="form-control" placeholder="Nombre del producto" autofocus/>
+            <input type="text" name="title" class="form-control" placeholder="Nombre del agente" autofocus/>
            </div>
            <div class="input-group mb-3">
             <div class="custom-file">
@@ -47,25 +47,10 @@
           </div>
             <div class="form-group">
                 <textarea type="text" name="description" class="form-control" placeholder="descripcion" ></textarea>
-              </div>
+            </div>
    
-            <div class="form-group">
-                <input type="text" name="enstock" class="form-control" placeholder="en stock?" autofocus/>
-            </div> 
-     
-
-            <div class="form-group">
-                <input type="text" name="price" class="form-control" placeholder="precio" autofocus/>
-            </div>
-            <div class="form-group">
-                <input type="text" name="oldprice" class="form-control" placeholder="precio anterior" autofocus/>
-            </div>
-
-         
+      
   
- 
-        
-                   
           <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit">
               Guardar

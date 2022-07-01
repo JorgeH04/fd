@@ -67,7 +67,7 @@ router.post('/ofertatres/new-ofertatres',   async (req, res) => {
   await newNote.save();
  
 
-  res.redirect('/ofertatresback/1');
+  res.redirect('/ofertatres/add');
  
    }catch(err){
        console.log(err)
