@@ -21,8 +21,27 @@
 		  <div class="site-section-title">
 			<h2>Real Property Estate</h2>
 		  </div>
-		  <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus in cum odio./p>
-		  <p>Illum repudiandae ratione facere explicabo. Consequatur dolor optio iusto, quos autem voluptate ea? Sunt laudantium fugiat, mollitia voluptate? Modi blanditiis veniam nesciunt architecto odit voluptatum tempore impedit magnam itaque natus!</p>
+		  <p class="lead">
+				
+			</p>
+		  <p>
+			
+					REAL PROPERTY ESTATE es un nuevo concepto de "Property Management" nace de la experiencia de veinte años de expertos en el campo de Real Estate, Developments, Golden Visa y Financial Advisory.
+
+					Nuestro equipo emplea a los mejores profesionales del sector.
+
+​
+
+         Nuestro objetivo es comprender plenamente las necesidades del cliente y ofrecer un asesoramiento personalizado y atento a todas sus necesidades.
+
+​
+
+          Somos líderes en Property Listing y colaboramos con los mejores constructores, diseñadores y arquitectos.
+
+​
+
+          Nuestra experiencia y nuestra pasión por el Real Estate ayudarán a hacer realidad su sueño.
+			</p>
 		  
 		</div>
 	  </div>
@@ -42,66 +61,32 @@
 		</div>
 	  </div>
 	  <div class="row">
+
+
 		  
-		<div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
-		  <div class="team-member">
+          <% ofertatres.forEach(function (ofertaun) { %>
+        <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+          <div class="team-member">
+    
+          <img src="<%= ofertaun.imageuno %>" alt="Image" class="img-fluid rounded mb-4">
+    
+          <div class="text">
+    
+            <h2 class="mb-2 font-weight-light text-black h4"><%= ofertaun.title %></h2>
+            <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
+            <p> <%= ofertaun.description %></p>
+            <p>
+            <!-- <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
+            <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
+            <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a> -->
+            </p>
+          </div>
+    
+          </div>
+        </div>
+        <% }) %>  
 
-			<img src="images/person_4.jpg" alt="Image" class="img-fluid rounded mb-4">
-
-			<div class="text">
-
-			  <h2 class="mb-2 font-weight-light text-black h4">Steven Ericson</h2>
-			  <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed qui at harum ipsum earum voluptas a unde error sapiente, sint perspiciatis, fugiat neque iure rerum repellendus tempora odio doloribus.</p>
-			  <p>
-				<a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
-				<a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
-				<a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
-			  </p>
-			</div>
-
-		  </div>
-		</div>
-
-		<div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
-		  <div class="team-member">
-
-			<img src="images/person_5.jpg" alt="Image" class="img-fluid rounded mb-4">
-
-			<div class="text">
-
-			  <h2 class="mb-2 font-weight-light text-black h4">Nathan Dumlao</h2>
-			  <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo nobis commodi rerum dicta, nulla. Delectus neque hic deserunt consequuntur esse facere, necessitatibus corrupti! Blanditiis ratione consequuntur beatae adipisci, voluptatum consequatur.</p>
-			  <p>
-				<a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
-				<a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
-				<a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
-			  </p>
-			</div>
-
-		  </div>
-		</div>
-
-		<div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
-		  <div class="team-member">
-
-			<img src="images/person_2.jpg" alt="Image" class="img-fluid rounded mb-4">
-
-			<div class="text">
-
-			  <h2 class="mb-2 font-weight-light text-black h4">Brooke Cagle</h2>
-			  <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nam tenetur molestiae maiores officiis consectetur, distinctio aperiam in illum praesentium corrupti, harum porro reiciendis magnam non enim dolorem aut explicabo.</p>
-			  <p>
-				<a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
-				<a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
-				<a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
-			  </p>
-			</div>
-
-		  </div>
-		</div>
+				
 
 	  </div>
 	</div>

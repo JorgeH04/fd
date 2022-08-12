@@ -52,101 +52,17 @@ router.get('/', async (req, res) => {
 
 router.get('/nosotros', async (req, res) => {
   var cart = new Cart(req.session.cart ? req.session.cart : {items: {}});
+  const ofertatres = await Ofertatres.find();
 
   res.render('about', {
-
+    ofertatres,
     products: cart.generateArray(), totalPrice: cart.totalPrice
   });
 });
   
   
-
-
-router.get('/visitas/:page', async (req, res) => {
-
-  const totalvisitas = await Ahome.countDocuments({})
-
-  let perPage = 12;
-  let page = req.params.page || 1;
-
-  Ahome 
-  .find({}) // finding all documents
-  .sort({ _id: -1 })
-  .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
-  .limit(perPage) // output just 9 items
-  .exec((err, ahome) => {
-    Ahome.countDocuments((err, count) => { // count to calculate the number of pages
-      if (err) return next(err);
-      res.render('users/visitors', {
-        ahome,
-        current: page,
-        pages: Math.ceil(count / perPage),
-        totalvisitas
-      });
-    });
-  });
-});
-
-
-
-router.get('/liked', async (req, res) => {
-
  
-   var cart = new Cart(req.session.cart ? req.session.cart : {items: {}});
-
-  const likedofertauno = await Ofertauno.find({like:true});
-  const likedofertados = await Ofertados.find({like:true});
-  const likedofertatres = await Ofertatres.find({like:true});
-  const likedproduno = await Produno.find({like:true});
-  const likedproddos = await Proddos.find({like:true});
-  const likedprodtres = await Prodtres.find({like:true});
-  const likedprodcuatro = await Prodcuatro.find({like:true});
-  const likedprodcinco = await Prodcinco.find({like:true});
-  const likedprodseis = await Prodseis.find({like:true});
-  const likedprodsiete = await Prodsiete.find({like:true});
-  const likedprodocho = await Prodocho.find({like:true});
-  const likedprodnueve = await Prodnueve.find({like:true});
-  const likedproddiez = await Proddiez.find({like:true});
-  const likedprodonce = await Prodonce.find({like:true});
-  const likedproddoce = await Proddoce.find({like:true});
-  const likedprodtrece = await Prodtrece.find({like:true});
-  const likedprodcatorce = await Prodcatorce.find({like:true});
-  const likedprodquince = await Prodquince.find({like:true});
-  const likedproddieciseis = await Proddieciseis.find({like:true});
-  const likedproddiecisiete = await Proddiecisiete.find({like:true});
-  const likedproddieciocho = await Proddieciocho.find({like:true});
-
-  console.log(likedofertauno )
  
-  res.render('liked', { 
-    likedofertauno, 
-    likedofertados, 
-    likedofertatres, 
-    likedproduno,
-    likedproddos,
-    likedprodtres,
-    likedprodcuatro,
-    likedprodcinco,
-    likedprodseis,
-    likedprodsiete,
-    likedprodocho,
-    likedprodnueve,
-    likedproddiez,
-    likedprodonce,
-    likedproddoce,
-    likedprodtrece,
-    likedprodcatorce,
-    likedprodquince,
-    likedproddieciseis,
-    likedproddiecisiete,
-    likedproddieciocho ,
-    products: cart.generateArray(), totalPrice: cart.totalPrice
-  });
-});
-
-
-
-
 
 router.get('/contacto', async (req, res) => {
   var cart = new Cart(req.session.cart ? req.session.cart : {items: {}});

@@ -58,9 +58,7 @@ router.post('/ofertatres/new-ofertatres',   async (req, res) => {
     name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice,
     description,
     imageuno:resp.url,
- 
     price
-
 
   });
   //newNote.user = req.user.id;
@@ -69,8 +67,8 @@ router.post('/ofertatres/new-ofertatres',   async (req, res) => {
 
   res.redirect('/ofertatres/add');
  
-   }catch(err){
-       console.log(err)
+   } catch(err) {
+      console.log(err)
    }  
 });
 
