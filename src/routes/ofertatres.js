@@ -61,9 +61,8 @@ router.post('/ofertatres/new-ofertatres',   async (req, res) => {
     price
 
   });
-  //newNote.user = req.user.id;
+  //newNote.user = req.user.id; 
   await newNote.save();
- 
 
   res.redirect('/ofertatres/add');
  
