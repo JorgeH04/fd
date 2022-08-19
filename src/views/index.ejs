@@ -130,50 +130,8 @@
 
 
 
+ 
 
-      
-
-  <div class="site-section bg-light">
-      <div class="container" data-aos="fade">
-        <div class="row mb-5 justify-content-center">
-        <div class="col-md-7">
-          <div class="site-section-title text-center">
-          <h2>Nuestros agentes</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum pariatur labore fugit amet eaque iure vitae, repellendus laborum in modi reiciendis quis! Optio minima quibusdam, laboriosam.</p>
-          </div>
-        </div>
-        </div>
-        <div class="row">
-
-
-          <% ofertatres.forEach(function (ofertaun) { %>
-        <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
-          <div class="team-member">
-    
-          <img src="<%= ofertaun.imageuno %>" alt="Image" class="img-fluid rounded mb-4">
-    
-          <div class="text">
-    
-            <h2 class="mb-2 font-weight-light text-black h4"><%= ofertaun.title %></h2>
-            <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
-            <p> <%= ofertaun.description %></p>
-            <p>
-            <!-- <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
-            <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
-            <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a> -->
-            </p>
-          </div>
-    
-          </div>
-        </div>
-        <% }) %>  
-
-  
-    
-        </div>
-
-      </div>
-      </div>
 
 
 
@@ -188,77 +146,77 @@
 
     
     <div class="row">
-        <div class="col-md-12">
-          
-          <h1 style="text-align: center; margin-top:70px; text-decoration: underline; text-underline-position: under;">Destacados</h1>
-     
-    </div>
+      <div class="col-md-12">
+        
+        <h1 style="text-align: center; margin-top:70px; text-decoration: underline; text-underline-position: under;">Destacados</h1>
+   
   </div>
+</div>
 
 
 
- 
+
 <div class="site-section site-section-sm bg-light">
-  <div class="container">
-  
-    <div class="row mb-5">
- 
-     
+<div class="container">
+
+  <div class="row mb-5">
+
+   
 
 
-      <% ofertauno.forEach(function (ofertaun) { %>
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="property-entry h-100">
-          <a href="/ofertaunoredirect/<%= ofertaun.id %>" class="property-thumbnail">
-            <div class="offer-type-wrap">
-              <!-- <span class="offer-type bg-info">Lease</span> -->
-            </div>
-            <img src="<%= ofertaun.imageuno %>" alt="Image" class="img-fluid">
-          </a>
-          <div class="p-4 property-body">
-               
-              <h2 class="property-title"><%= ofertaun.name %></h2>
-              <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> <%= ofertaun.title %></span>
-              <strong class="property-price text-primary mb-3 d-block text-success">$<%= ofertaun.price %></strong>
-              <ul class="property-specs-wrap mb-3 mb-lg-0">
-                <li>
+    <% ofertauno.forEach(function (ofertaun) { %>
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="property-entry h-100">
+        <a href="/ofertaunoredirect/<%= ofertaun.id %>" class="property-thumbnail">
+          <div class="offer-type-wrap">
+            <!-- <span class="offer-type bg-info">Lease</span> -->
+          </div>
+          <img src="<%= ofertaun.imageuno %>" alt="Image" class="img-fluid">
+        </a>
+        <div class="p-4 property-body">
+             
+            <h2 class="property-title"><%= ofertaun.name %></h2>
+            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> <%= ofertaun.title %></span>
+            <strong class="property-price text-primary mb-3 d-block text-success">$<%= ofertaun.price %></strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0">
+              <li>
+                <span class="property-specs"> 
+                  <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656340397/182657_ycmmol.png">
+                   
+                </span>
+                <span class="property-specs-number"><%= ofertaun.enstock %></span>
+                
+              </li>
+              <li>
+                <span class="property-specs">  
+                   <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656340529/descarga_1_smf4c5.png" alt="">
+                </span>
+                <span class="property-specs-number"><%= ofertaun.colorstock %></span>
+                
+              </li>
+             
+              
+
+              <li>
                   <span class="property-specs"> 
-                    <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656340397/182657_ycmmol.png">
-                     
-                  </span>
-                  <span class="property-specs-number"><%= ofertaun.enstock %></span>
+                     <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656178991/square-metre-outline-information-icon-260nw-2011557692_bl7q40.webp" alt="">
+                    </span>
+                  <span class="property-specs-number"><%= ofertaun.talle %></span>
                   
                 </li>
-                <li>
-                  <span class="property-specs">  
-                     <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656340529/descarga_1_smf4c5.png" alt="">
-                  </span>
-                  <span class="property-specs-number"><%= ofertaun.colorstock %></span>
-                  
-                </li>
-               
-                
-
-                <li>
-                    <span class="property-specs"> 
-                       <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656178991/square-metre-outline-information-icon-260nw-2011557692_bl7q40.webp" alt="">
-                      </span>
-                    <span class="property-specs-number"><%= ofertaun.talle %></span>
-                    
-                  </li>
 
 
-                
-              </ul>
+              
+            </ul>
 
-            </div>
           </div>
         </div>
-      <% }) %>
- 
+      </div>
+    <% }) %>
 
-    </div>
+
   </div>
+</div>
 </div>
 
 
