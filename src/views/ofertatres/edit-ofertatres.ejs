@@ -40,33 +40,20 @@
          <div class="form-group">
             <input type="text" name="title" class="form-control" placeholder="title" value="<%= ofertatres.title %>" autofocus/>
           </div>
+
+          
+         <div class="form-group">
+          <input type="text" name="name" class="form-control" placeholder="subtitulo" value="<%= ofertatres.name %>" autofocus/>
+        </div>
           <div class="form-group">
               <input type="text" name="image" class="form-control" placeholder="imagen 1" value="<%= ofertatres.image %>" autofocus/>
             </div>
-            <div class="form-group">
-              <input type="text" name="imagedos" class="form-control" placeholder="imagen 2" value="<%= ofertatres.imagedos %>" autofocus/>
-            </div>
-            <div class="form-group">
-              <input type="text" name="imagetres" class="form-control" placeholder="imagen 3" value="<%= ofertatres.imagetres %>" autofocus/>
-            </div>
+    
             <div class="form-group">
               <textarea type="text" name="description" class="form-control" placeholder="descripcion" ><%= ofertatres.description %>" </textarea>
             </div>
-            <div class="form-group">
-              <input type="text" name="enstock" class="form-control" placeholder="en stock?" value="<%= ofertatres.enstock %>" autofocus/>
-            </div>
-            <div class="form-group">
-            <input type="text" name="price" class="form-control" placeholder="precio" value="<%= ofertatres.price %>" autofocus/>
-            </div>
-            <div class="form-group">
-                <input type="text" name="oldprice" class="form-control" placeholder="precio anterior" value="<%= ofertatres.oldprice %>" autofocus/>
-            </div>
  
-
-            <div class="form-group">
-              <input type="text" name="dolarprice" class="form-control" placeholder="precio del dolar" value="<%= ofertatres.dolarprice %>"  autofocus/>
-          </div>
-
+         
           <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit">
               Guardar
