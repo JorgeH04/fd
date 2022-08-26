@@ -1,6 +1,8 @@
 <% include ../partials/_header %>
 
 
+
+
 <div class="slide-one-item home-slider owl-carousel"  >
     <div class="site-blocks-cover overlay" style="background-image: url(https://res.cloudinary.com/dsk4fft6r/image/upload/v1661362629/BANNER_4_gyo0ce.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
@@ -15,14 +17,9 @@
 
 
 
-
-
-
   <div class="site-section site-section-sm bg-light">
       <div class="container">
-      
         <div class="row mb-5">
-    
           <% produno.forEach(function (produn) { %>
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="property-entry h-100">
@@ -37,7 +34,7 @@
                  
                 <h2 class="property-title"><%= produn.name %></h2>
                 <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> <%= produn.title %></span>
-                <strong class="property-price text-primary mb-3 d-block text-success">$<%= produn.price %></strong>
+                <strong class="property-price text-primary mb-3 d-block text-success">€<%= produn.price %></strong>
                 <ul class="property-specs-wrap mb-3 mb-lg-0">
                   <li>
                     <span class="property-specs"> 
