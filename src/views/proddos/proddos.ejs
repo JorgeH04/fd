@@ -1,193 +1,183 @@
 <% include ../partials/_header %>
 
 
-<!-- <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-	<div class="container">
-	  <div class="row align-items-center justify-content-center text-center">
-		<div class="col-md-10">
-		  <h1 class="mb-2">About Homeland</h1>
-		</div>
-	  </div>
-	</div>
-  </div> -->
 
 
 
-  <div class="slide-one-item home-slider owl-carousel"  >
+<div class="slide-one-item home-slider owl-carousel"  >
 
-      <div class="site-blocks-cover overlay" style="background-image: url(https://res.cloudinary.com/dsk4fft6r/image/upload/v1656179374/hero_bg_4_oulsx4.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center text-center">
-            <div class="col-md-10">
-               <h1 class="mb-2">Golden visa services</h1>
-             </div>
-          </div>
-        </div>
-      </div>  
-  
-     
-  
-    </div>
-  
-  
-  
-  
-        <div class="row">
-          <div class="col-md-12">
-            <div class="view-options bg-white py-3 px-3 d-md-flex align-items-center">
-              <div class="mr-auto">
-          
-              </div>
-              <div class="ml-auto d-flex align-items-center">
-                <div>
-            
-                </div>
-  
-  
-                <div class="select-wrap">
-                  <span class="icon icon-arrow_drop_down"></span>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-       
-      </div>
-    </div>
-  
-  
-  <div class="site-section site-section-sm bg-light">
+    <div class="site-blocks-cover overlay" style="background-image: url(https://res.cloudinary.com/dsk4fft6r/image/upload/v1656179374/hero_bg_4_oulsx4.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
-      
-        <div class="row mb-5">
-  
-          
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-10">
+             <h1 class="mb-2">Golden visa services</h1>
+           </div>
+        </div>
+      </div>
+    </div>  
+
    
+
+  </div>
+
+
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="view-options bg-white py-3 px-3 d-md-flex align-items-center">
+            <div class="mr-auto">
+        
+            </div>
+            <div class="ml-auto d-flex align-items-center">
+              <div>
           
-  
-          <% proddos.forEach(function (produn) { %>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="property-entry h-100">
-              <a href="/alquileres-detalles/<%= produn.id %>" class="property-thumbnail">
-                <div class="offer-type-wrap">
-             
-                </div>
-                <img src="<%= produn.imageuno %>" alt="Image" class="img-fluid">
-              </a>
-             
-              <div class="p-4 property-body">
-                 
-                <h2 class="property-title"><%= produn.name %></h2>
-                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span><%= produn.title %></span>
-                <strong class="property-price text-primary mb-3 d-block text-success">$<%= produn.price %></strong>
-                <ul class="property-specs-wrap mb-3 mb-lg-0">
-                  <li>
-                    <span class="property-specs"> 
-                      <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656340397/182657_ycmmol.png">
-                       
-                    </span>
-                    <span class="property-specs-number"><%= produn.enstock %></span>
-                    
-                  </li>
-                  <li>
-                    <span class="property-specs">  
-                       <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1661376513/WhatsApp_Image_2022-08-24_at_6.26.21_PM_jbaisz.jpg" alt="">
-                    </span>
-                    <span class="property-specs-number"><%= produn.colorstock %></span>
-                    
-                  </li>
-                 
-                  
-  
-                  <li>
-                      <span class="property-specs"> 
-                         <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656178991/square-metre-outline-information-icon-260nw-2011557692_bl7q40.webp" alt="">
-                        </span>
-                      <span class="property-specs-number"><%= produn.talle %></span>
-                      
-                    </li>
-  
-  
-                  
-                </ul>
-  
+              </div>
+
+
+              <div class="select-wrap">
+                <span class="icon icon-arrow_drop_down"></span>
+                
               </div>
             </div>
           </div>
-          <% }) %>
-  
-  
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="site-pagination">
-              
-                    <% if(pages > 0) { %> <!-- show pagination if there is pages -->
-  
-                        <!-- FIRST ITEM -->
-                        <% if(current == 1) { %>
-                        
-                            <a   href="#">First</a>
-                        
-                        <% } else { %>
-                          
-                            <a   href="/alquileres/1">First</a>
-                        
-                        <% } %>
-                        <!-- ITEMS  -->
-                        <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
-                        <% if(i !== 1) { %>
-                         
-                            <a  href="#">...</a>
-                          
-                        <% } %>
-                        <% for(; i <= (Number(current) + 4) && i <= pages; i++) { %>
-                          <% if(i == current) { %>
-                            
-                              <a  href="<%= i %>">
-                                <%= i %>
-                              </a>
-                        
-                          <% } else { %>
-                          
-                              <a   href="/alquileres/<%= i %>">
-                                <%= i %>
-                              </a>
-                          
-                          <% } %>
-                          <% if (i == Number(current) + 4 && i < pages) { %>
-                           
-                               <a class="page-link" href="#">...</a>
-                          
-                          <% } %>
-                        <% } %>
-                        <!-- LAST ITEM -->
-                        <% if(current == pages) { %>
-                        
-                            <a href="#">
-                              Last
-                            </a>
-                         <% } else { %>
-                          
-                            <a href="/alquileres/<%= pages %>">
-                              Last
-                            </a>
-                        
-                        <% } %>
-                       
-                  <% } %>
-    
-           
-            </div>
-          </div>  
-        </div>
-        
       </div>
+     
     </div>
-  
-  
+  </div>
+
+
+<div class="site-section site-section-sm bg-light">
+    <div class="container">
     
+      <div class="row mb-5">
+
+        
+ 
+        
+
+        <% proddos.forEach(function (produn) { %>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="property-entry h-100">
+            <a href="/alquileres-detalles/<%= produn.id %>" class="property-thumbnail">
+              <div class="offer-type-wrap">
+           
+              </div>
+              <img src="<%= produn.imageuno %>" alt="Image" class="img-fluid">
+            </a>
+           
+            <div class="p-4 property-body">
+               
+              <h2 class="property-title"><%= produn.name %></h2>
+              <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span><%= produn.title %></span>
+              <strong class="property-price text-primary mb-3 d-block text-success">$<%= produn.price %></strong>
+              <ul class="property-specs-wrap mb-3 mb-lg-0">
+                <li>
+                  <span class="property-specs"> 
+                    <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656340397/182657_ycmmol.png">
+                     
+                  </span>
+                  <span class="property-specs-number"><%= produn.enstock %></span>
+                  
+                </li>
+                <li>
+                  <span class="property-specs">  
+                     <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1661376513/WhatsApp_Image_2022-08-24_at_6.26.21_PM_jbaisz.jpg" alt="">
+                  </span>
+                  <span class="property-specs-number"><%= produn.colorstock %></span>
+                  
+                </li>
+               
+                
+
+                <li>
+                    <span class="property-specs"> 
+                       <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656178991/square-metre-outline-information-icon-260nw-2011557692_bl7q40.webp" alt="">
+                      </span>
+                    <span class="property-specs-number"><%= produn.talle %></span>
+                    
+                  </li>
+
+
+                
+              </ul>
+
+            </div>
+          </div>
+        </div>
+        <% }) %>
+
+
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="site-pagination">
+            
+                  <% if(pages > 0) { %> <!-- show pagination if there is pages -->
+
+                      <!-- FIRST ITEM -->
+                      <% if(current == 1) { %>
+                      
+                          <a   href="#">First</a>
+                      
+                      <% } else { %>
+                        
+                          <a   href="/alquileres/1">First</a>
+                      
+                      <% } %>
+                      <!-- ITEMS  -->
+                      <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                      <% if(i !== 1) { %>
+                       
+                          <a  href="#">...</a>
+                        
+                      <% } %>
+                      <% for(; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                        <% if(i == current) { %>
+                          
+                            <a  href="<%= i %>">
+                              <%= i %>
+                            </a>
+                      
+                        <% } else { %>
+                        
+                            <a   href="/alquileres/<%= i %>">
+                              <%= i %>
+                            </a>
+                        
+                        <% } %>
+                        <% if (i == Number(current) + 4 && i < pages) { %>
+                         
+                             <a class="page-link" href="#">...</a>
+                        
+                        <% } %>
+                      <% } %>
+                      <!-- LAST ITEM -->
+                      <% if(current == pages) { %>
+                      
+                          <a href="#">
+                            Last
+                          </a>
+                       <% } else { %>
+                        
+                          <a href="/alquileres/<%= pages %>">
+                            Last
+                          </a>
+                      
+                      <% } %>
+                     
+                <% } %>
+  
+         
+          </div>
+        </div>  
+      </div>
+      
+    </div>
+  </div>
+
+
   
 
 	<% include ../partials/_footer %>
