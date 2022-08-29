@@ -51,7 +51,7 @@ const storage = multer.diskStorage({
     console.log(files)
      cb(null, uuid() + path.extname(files.originalnamedos));
 },
-filenametres: (req, files, cb, filenametres) => {
+   filenametres: (req, files, cb, filenametres) => {
   console.log(files);
    cb(null, uuid() + path.extname(files.originalnametres));
 },

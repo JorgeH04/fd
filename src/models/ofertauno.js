@@ -16,6 +16,23 @@ const NoteSchema = new Schema({
   imagenueve: String,
   imagediez: String,
 
+  imageonce: String,
+  imagedoce: String,
+  imagetrece: String,
+  imagecatorce: String,
+  imagequince: String,
+  imagedieciseis: String,
+  imagediecisiete: String,
+  imagedieciocho: String,
+  imagediecinueve: String,
+  imageveinte: String,
+
+  imageveintiuno: String,
+  imageveintidos: String,
+  imageveintitres: String,
+  imageveinticuatro: String,
+  imageveinticinco: String,
+
   path: String,
 
 
