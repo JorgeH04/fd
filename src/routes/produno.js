@@ -44,6 +44,90 @@ cloudinary.config({
 
 
 
+
+////////////////////////////////////////back/////////////////////////////////////////////////////7
+
+
+
+
+router.post('/produno/new-produno',  async (req, res) => {
+  const { name, title, filtro, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
+
+  try {
+   const resp = await cloudinary.v2.uploader.upload(req.files[0].path)
+   const respdos = await cloudinary.v2.uploader.upload(req.files[1].path)
+   const resptres = await cloudinary.v2.uploader.upload(req.files[2].path)
+   const respcuatro = await cloudinary.v2.uploader.upload(req.files[3].path)
+   const respcinco = await cloudinary.v2.uploader.upload(req.files[4].path)
+   const respseis = await cloudinary.v2.uploader.upload(req.files[5].path)
+   const respsiete = await cloudinary.v2.uploader.upload(req.files[6].path)
+   const respocho = await cloudinary.v2.uploader.upload(req.files[7].path)
+   const respnueve = await cloudinary.v2.uploader.upload(req.files[8].path)
+   const respdiez = await cloudinary.v2.uploader.upload(req.files[9].path)
+
+
+  //  const responce = await cloudinary.v2.uploader.upload(req.files[10].path)
+  //  const respdoce = await cloudinary.v2.uploader.upload(req.files[11].path)
+  //  const resptrece = await cloudinary.v2.uploader.upload(req.files[12].path)
+  //  const respcatorce = await cloudinary.v2.uploader.upload(req.files[13].path)
+  //  const respquince = await cloudinary.v2.uploader.upload(req.files[14].path)
+  //  const respdieciseis = await cloudinary.v2.uploader.upload(req.files[15].path)
+  //  const respdiecisiete = await cloudinary.v2.uploader.upload(req.files[16].path)
+  //  const respdieciocho = await cloudinary.v2.uploader.upload(req.files[17].path)
+  //  const respdiecinueve = await cloudinary.v2.uploader.upload(req.files[18].path)
+  
+  //  const respveinte = await cloudinary.v2.uploader.upload(req.files[19].path)
+  //  const respveintiuno = await cloudinary.v2.uploader.upload(req.files[20].path)
+  //  const respveintidos = await cloudinary.v2.uploader.upload(req.files[21].path)
+  //  const respveintitres = await cloudinary.v2.uploader.upload(req.files[22].path)
+  //  const respveinticuatro = await cloudinary.v2.uploader.upload(req.files[23].path)
+  //  const respveinticinco = await cloudinary.v2.uploader.upload(req.files[24].path)
+
+   const newNote = new Produno({ 
+ 
+    name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, filtro,
+    imageuno:resp.url,
+    imagedos:respdos.url,
+    imagetres:resptres.url,
+    imagecuatro:respcuatro.url,
+    imagecinco:respcinco.url,
+    imageseis:respseis.url,
+    imagesiete:respsiete.url,
+    imageocho:respocho.url,
+    imagenueve:respnueve.url,
+    imagediez:respdiez.url,
+
+
+    // imageonce:responce.url,
+    // imagedoce:respdoce.url,
+    // imagetrece:resptrece.url,
+    // imagecatorce:respcatorce.url,
+    // imagequince:respquince.url,
+    // imagedieciseis:respdieciseis.url,
+    // imagediecisiete:respdiecisiete.url,
+    // imagedieciocho:respdieciocho.url,
+    // imagediecinueve:respdiecinueve.url,
+    // imageveinte:respveinte.url,
+
+    // imageveintiuno:respveintiuno.url,
+    // imageveintidos:respveintidos.url,
+    // imageveintitres:respveintitres.url,
+    // imageveinticuatro:respveinticuatro.url,
+    // imageveinticinco:respveinticinco.url,
+
+    price
+  });
+  await newNote.save();
+
+  res.redirect('/produnoback/1');
+ 
+   }catch(err){
+       console.log(err)
+   }  
+});
+
+
+
 router.get('/venta/:page', async (req, res) => {
 
   var cart = new Cart(req.session.cart ? req.session.cart : {items: {}});
@@ -124,49 +208,7 @@ router.get('/produno/delete/:id', async (req, res) => {
 
 
 
-////////////////////////////////////////back/////////////////////////////////////////////////////7
 
-
-
-
-router.post('/produno/new-produno',  async (req, res) => {
-  const { name, title, filtro, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
-
-  try {
-   const resp = await cloudinary.v2.uploader.upload(req.files[0].path)
-   const respdos = await cloudinary.v2.uploader.upload(req.files[1].path)
-   const resptres = await cloudinary.v2.uploader.upload(req.files[2].path)
-   const respcuatro = await cloudinary.v2.uploader.upload(req.files[3].path)
-   const respcinco = await cloudinary.v2.uploader.upload(req.files[4].path)
-   const respseis = await cloudinary.v2.uploader.upload(req.files[5].path)
-   const respsiete = await cloudinary.v2.uploader.upload(req.files[6].path)
-   const respocho = await cloudinary.v2.uploader.upload(req.files[7].path)
-   const respnueve = await cloudinary.v2.uploader.upload(req.files[8].path)
-   const respdiez = await cloudinary.v2.uploader.upload(req.files[9].path)
-
-   const newNote = new Produno({ 
- 
-    name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, filtro,
-    imageuno:resp.url,
-    imagedos:respdos.url,
-    imagetres:resptres.url,
-    imagecuatro:respcuatro.url,
-    imagecinco:respcinco.url,
-    imageseis:respseis.url,
-    imagesiete:respsiete.url,
-    imageocho:respocho.url,
-    imagenueve:respnueve.url,
-    imagediez:respdiez.url,
-    price
-  });
-  await newNote.save();
-
-  res.redirect('/produnoback/1');
- 
-   }catch(err){
-       console.log(err)
-   }  
-});
 
 
 
