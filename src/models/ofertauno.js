@@ -36,13 +36,13 @@ const NoteSchema = new Schema({
   path: String,
 
 
-  filenameuno: {type: String},
-  filenamedos: {type: String},
-  filenametres: {type: String},
+  // filenameuno: {type: String},
+  // filenamedos: {type: String},
+  // filenametres: {type: String},
 
-  originalnameuno: {type: String},
-  originalnamedos: {type: String},
-  originalnametres: {type: String},
+  // originalnameuno: {type: String},
+  // originalnamedos: {type: String},
+  // originalnametres: {type: String},
 
   public_id: String,
 
