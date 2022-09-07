@@ -56,7 +56,7 @@ const NoteSchema = new Schema({
   talle: String,
   tallestock: String,
   oldprice: String, 
-  price: Number,
+  price: String,
   dolarprice: String,
   amount: String,
   like: {
