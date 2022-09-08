@@ -64,27 +64,27 @@
              
             <h2 class="property-title"><%= ofertaun.name %></h2>
             <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> <%= ofertaun.title %></span>
-            <strong class="property-price text-primary mb-3 d-block text-primary">€<%= ofertaun.price %></strong>
-            <ul class="property-specs-wrap mb-3 mb-lg-0">
-                <li>
+            <strong class="property-price text-primary mb-3 d-block text-primary">€ <%= ofertaun.price %></strong>
+            <ul class="property-specs-wrap mb-3 mb-lg-0" >
+                <li type="circle">
                     <!-- <span class="property-specs"> 
                       <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_25/v1656346048/1606239_n4aolu.png">
                     </span> -->
 
-                    <span class="property-specs-number">Dormitorios: <%= ofertaun.color %></span> 
+                    <span class="property-specs-number" >
+                      <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_30/v1662653194/images_pw3ywc.png" >
+                      Dormitorios: <%= ofertaun.color %></span> 
               </li>
               <br>
-              <!-- <li>
-                <span class="property-specs"> 
-                  <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656340397/182657_ycmmol.png">
-                </span>
-                <span class="property-specs-number"><%= produn.enstock %></span> 
-              </li> -->
+          
+              
               <li>
                 <!-- <span class="property-specs">  
                    <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1661376513/WhatsApp_Image_2022-08-24_at_6.26.21_PM_jbaisz.jpg" alt="">
                 </span> -->
-                <span class="property-specs-number">Baños: <%= ofertaun.colorstock %></span>
+                <span class="property-specs-number">
+                    <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_30/v1662653194/images_pw3ywc.png" >
+                  Baños: <%= ofertaun.colorstock %></span>
                 
               </li>
              <br>
@@ -93,7 +93,9 @@
                   <!-- <span class="property-specs"> 
                      <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_22/v1662497087/WhatsApp_Image_2022-09-06_at_17.42.47_m8nzot.jpg" alt="">
                     </span> -->
-                  <span class="property-specs-number">M2 construido: <%= ofertaun.talle %></span>
+                  <span class="property-specs-number">
+                      <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_30/v1662653194/images_pw3ywc.png" >
+                    m2 construido: <%= ofertaun.talle %></span>
                   
               </li>
 
@@ -103,7 +105,9 @@
                 <!-- <span class="property-specs"> 
                   <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_20/v1656340397/182657_ycmmol.png">
                 </span> -->
-                <span class="property-specs-number">M2 Plot: <%= ofertaun.enstock %></span> 
+                <span class="property-specs-number">
+                    <img src="https://res.cloudinary.com/dsk4fft6r/image/upload/c_scale,w_30/v1662653194/images_pw3ywc.png" >
+                  m2 Plot: <%= ofertaun.enstock %></span> 
               </li>
 
 
