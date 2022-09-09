@@ -23,6 +23,9 @@ router.post('/ofertados/new-ofertados',  async (req, res) => {
     imagetres,
     imagecuatro,
     imagecinco,
+    imageseis,
+    imagesiete,
+
     description,
     filtroprice,
     enstock,
@@ -62,6 +65,8 @@ router.post('/ofertados/new-ofertados',  async (req, res) => {
       imagetres,
       imagecuatro,
       imagecinco,
+      imageseis,
+      imagesiete,
       description,
       filtroprice,
       enstock,
