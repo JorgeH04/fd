@@ -69,9 +69,9 @@ router.post('/proddos/new-proddos',  async (req, res) => {
 
 
 
-     
 
-  router.get('/goldenvisa/:page', async (req, res) => {
+
+  router.get('/goldenvisa', async (req, res) => {
 
     var cart = new Cart(req.session.cart ? req.session.cart : {items: {}});
 
