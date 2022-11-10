@@ -73,8 +73,7 @@ router.post('/proddos/new-proddos',  async (req, res) => {
 
   router.get('/goldenvisa', async (req, res) => {
 
-    var cart = new Cart(req.session.cart ? req.session.cart : {items: {}});
-
+ 
     let perPage = 15;
     let page = req.params.page || 1;
   
@@ -90,7 +89,6 @@ router.post('/proddos/new-proddos',  async (req, res) => {
           proddos,
           current: page,
           pages: Math.ceil(count / perPage),
-          products: cart.generateArray(), totalPrice: cart.totalPrice
 
         });
       });
@@ -171,117 +169,9 @@ router.get('/proddosback/:page', async (req, res) => {
 
 
 
-
-
-router.post("/filtroprod", function(req, res){
-  var cart = new Cart(req.session.cart ? req.session.cart : {items: {}});
-
-  let perPage = 15;
-  let page = req.params.page || 1;
-
-  var flrtName = req.body.filtroprod;
-
-  if(flrtName!='' ) {
-
-    var flterParameter={ $and:[{ filtro:flrtName},
-      {$and:[{},{}]}
-      ]
-       
-    }
-    }else{
-      var flterParameter={}
-  }
-  var proddos = Proddos.find(flterParameter);
-  proddos
-  //.find( flterParameter) 
-  .sort({ _id: -1 })
-  .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
-  .limit(perPage) // output just 9 items
-  .exec((err, data) => {
-    proddos.countDocuments((err, count) => {  
-  //.exec(function(err,data){
-      if(err) throw err;
-      res.render("proddos/proddos",
-      {
-        proddos: data, 
-        current: page,
-        pages: Math.ceil(count / perPage),
-        products: cart.generateArray(), totalPrice: cart.totalPrice
-      });
-    });
-  });
-});
-
-
-
-
-
-
-
- ////////////////////////////like////////////////////////
-
-router.get('/likeproddos/:id', async (req, res, next) => {
-  // let { id } = req.params;
-  // const task = await Ofertauno.findById(id);
-  const task = await Proddos.findById(req.params.id);
-  task.like = !task.like;
-  await task.save();
- // res.redirect('/pedidos/:1');
-  res.json(true);
-});  
  
 
-// talle y color
-router.get('/proddos/tallecolor/:id',  async (req, res) => {
-  const proddos = await Proddos.findById(req.params.id);
-  res.render('proddos/tallecolor-proddos', { proddos });
-});
-
-router.post('/proddos/tallecolor/:id',  async (req, res) => {
-//router.post('/addtocardproddos/:id',  async (req, res) => {
-  const { id } = req.params;
-  await Proddos.updateOne({_id: id}, req.body);
-  // const task = await Proddos.findById(id);
-  // task.status = !task.status;
-  // await task.save();
-
-  //res.redirect('/proddosredirect/' + id);
-  //res.redirect('/shopcart');
-});
-
-
-
-
-router.get("/searchback", function(req, res){
-  var noMatch = null;
-  if(req.query.search) {
-      const regex = new RegExp(escape(req.query.search), 'gi');
-      // Get all campgrounds from DB
-      console.log(req.query.search)
-      Proddos.find({title: regex}, function(err, proddos){
-         if(err){
-             console.log(err);
-         } else {
-            if(proddos.length < 1) {
-                noMatch = "No campgrounds match that query, please try again.";
-            }
-            res.render("produno/new-produno",{proddos, noMatch: noMatch});
-         }
-      });
-
-  } else {
-      // Get all campgrounds from DB
-      Proddos.find({}, function(err, proddos){
-         if(err){
-             console.log(err);
-         } else {
-            res.render("produno/produno",{proddos, noMatch: noMatch});
-         }
-      });
-  }
-});
-
-
+ 
 
 
 //editar
