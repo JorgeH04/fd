@@ -103,42 +103,42 @@ app.use((req, res, next) => {
    
 // routes
 app.use(require('./routes'));
-app.use(require('./routes/users'));
+// app.use(require('./routes/users'));
 app.use(require('./routes/ofertauno'));
 app.use(require('./routes/ofertados'));
 app.use(require('./routes/ofertatres'));
 //app.use(require('./routes/ofertacuatro'));
 app.use(require('./routes/produno'));
 app.use(require('./routes/proddos'));
-app.use(require('./routes/prodtres'));
-app.use(require('./routes/prodcuatro'));
-app.use(require('./routes/prodenvio'));
-app.use(require('./routes/prodcinco'));
-app.use(require('./routes/prodseis'));
-app.use(require('./routes/prodsiete'));
-app.use(require('./routes/prodocho'));
-app.use(require('./routes/prodnueve'));
+// app.use(require('./routes/prodtres'));
+// app.use(require('./routes/prodcuatro'));
+// app.use(require('./routes/prodenvio'));
+// app.use(require('./routes/prodcinco'));
+// app.use(require('./routes/prodseis'));
+// app.use(require('./routes/prodsiete'));
+// app.use(require('./routes/prodocho'));
+// app.use(require('./routes/prodnueve'));
 
   
-app.use(require('./routes/proddiez')); 
-app.use(require('./routes/prodonce'));
-app.use(require('./routes/proddoce'));
-app.use(require('./routes/prodtrece'));
-app.use(require('./routes/prodcatorce'));
-app.use(require('./routes/prodquince'));
-app.use(require('./routes/proddieciseis'));
-app.use(require('./routes/proddiecisiete'));
-app.use(require('./routes/proddieciocho'));
-app.use(require('./routes/proddiecinueve'));
-app.use(require('./routes/prodveinte'));
+// app.use(require('./routes/proddiez')); 
+// app.use(require('./routes/prodonce'));
+// app.use(require('./routes/proddoce'));
+// app.use(require('./routes/prodtrece'));
+// app.use(require('./routes/prodcatorce'));
+// app.use(require('./routes/prodquince'));
+// app.use(require('./routes/proddieciseis'));
+// app.use(require('./routes/proddiecisiete'));
+// app.use(require('./routes/proddieciocho'));
+// app.use(require('./routes/proddiecinueve'));
+// app.use(require('./routes/prodveinte'));
   
-app.use(require('./routes/prodenvio'));
-app.use(require('./routes/prodenviobis'));
+// app.use(require('./routes/prodenvio'));
+// app.use(require('./routes/prodenviobis'));
 
-app.use(require('./routes/prodenviodos'));
-app.use(require('./routes/prodenviotres'));
-app.use(require('./routes/prodenviocuatro'));
-app.use(require('./routes/prodenviocinco'));
+// app.use(require('./routes/prodenviodos'));
+// app.use(require('./routes/prodenviotres'));
+// app.use(require('./routes/prodenviocuatro'));
+// app.use(require('./routes/prodenviocinco'));
   
 // server
 app.listen(app.get('port'), () => {
