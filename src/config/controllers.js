@@ -1,5 +1,5 @@
 const bcrypt= require('bcryptjs');
-const User = require('../models/User');
+// const User = require('../models/User');
 const crypto=require('crypto');
 
 const resetMailer=require('../mailer/resetPasswordmailer');

@@ -6,9 +6,9 @@ const { unlink } = require('fs-extra');
     
 // Models
 const Proddos = require('../models/proddos');
-const Cart = require('../models/cart');
-const Order = require('../models/order');
-const Cartdolar = require('../models/cartdolar');
+// const Cart = require('../models/cart');
+// const Order = require('../models/order');
+// const Cartdolar = require('../models/cartdolar');
 // Helpers
 const { isAuthenticated } = require('../helpers/auth');
  
@@ -314,97 +314,13 @@ router.get('/proddos/delete/:id', async (req, res) => {
 
 
 
-
-router.get('/shopcart', function (req, res, next){
-
-  if(!req.session.cart){
-    return res.render('cart/shopcart', {products:null})
-  }
-
-  var cart = new Cart(req.session.cart);
-  res.render('cart/shopcart', {products: cart.generateArray(), totalPrice: cart.totalPrice})
-});
+ 
+ 
+ 
  
 
 
-router.get('/shopcart', function (req, res, next){
-  if(!req.session.cart){
-    return res.render('cart/shopcart', {products:null})
-  }
-  var cartdolar = new Cartdolar(req.session.cartdolar);
-  var cart = new Cart(req.session.cart);
-  res.render('cart/shopcart', {
-    products: cart.generateArray(), 
-    totalPrice: cart.totalPrice,
-    totalPriceDolar: cartdolar.totalPrice
-  })
-});
 
  
-router.get('/addtocardproddos/:id', async function(req, res, next){
-  const { id } = req.params;
-  var productId = req.params.id;
-  var cart = new Cart(req.session.cart ? req.session.cart : {items: {}});
-   Proddos.findById(productId,async function(err, product){
-    if(err){
-      return res-redirect('/');
-    }
-
-
-  //  if(product.status == true) {
-       cart.add(product, product.id);
-      req.session.cart = cart;
-     //  product.status = !product.status;
-  //    await product.save();
-  // }else{
-    //  req.flash('success', 'Elija su color y talle primero');
-    //  res.redirect('/produnoredirect/' + productId);
-  // }
-
-
-    console.log(req.session.cart);
-     req.flash('success', 'Producto agregado al carro exitosamente');
-    //res.redirect('/produnoredirect/' + productId);
-    
-    res.redirect('/shopcart');
-  //  await Proddos.deleteOne({_id: id});
-
-  });
-});
-
-
-
-
-router.get('/addtocardproddos/:id', function(req, res, next){
-  var productId = req.params.id;
-  var cart = new Cart(req.session.cart ? req.session.cart : {items: {}});
-  var cartdolar = new Cartdolar(req.session.cartdolar ? req.session.cartdolar : {items: {}});
-  Proddos.findById(productId,async function(err, product){
-    if(err){
-      return res-redirect('/');
-    }
-
-
-  //  if(product.status == true) {
-      cartdolar.add(product, product.id);
-      cart.add(product, product.id);
-      req.session.cart = cart;
-      req.session.cartdolar = cartdolar;
-    //  product.status = !product.status;
-  //    await product.save();
-  // }else{
-    //  req.flash('success', 'Elija su color y talle primero');
-    //  res.redirect('/produnoredirect/' + productId);
-  // }
-
-
-    console.log(req.session.cart);
-    console.log(req.session.cartdolar);
-    req.flash('success', 'Producto agregado al carro exitosamente');
-    //res.redirect('/produnoredirect/' + productId);
-    res.redirect('/shopcart');
-  });
-});
-
 
 module.exports = router;
