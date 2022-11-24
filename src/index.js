@@ -16,7 +16,6 @@ const engine = require('ejs-mate');
 
 
 const MongoStore = require('connect-mongo')(session);
-// Initializations   <%= session.cart.totalQty %>
 const app = express();
 require('./database');
 require('./config/passport');

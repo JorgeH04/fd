@@ -23,11 +23,7 @@ const Proddos = require('../models/proddos');
 // const Proddiecisiete = require('../models/proddiecisiete');
 // const Proddieciocho = require('../models/proddieciocho');
  
-router.get('/realinmob', async (req, res) => {
-  // const users = await User.find();
-   res.render('users/dashboard');
-   
- });
+
 
  const nodemailer = require('nodemailer');
 
@@ -152,5 +148,11 @@ let transporter = nodemailer.createTransport({
  res.redirect('/contacto');
 });
 
+
+
+
+router.get('/realinmob', async (req, res) => {
+   res.render('users/dashboard');
+ });
 
 module.exports = router;
