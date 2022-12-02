@@ -48,7 +48,28 @@ cloudinary.config({
 ////////////////////////////////////////back/////////////////////////////////////////////////////7
 
 
+router.get('/produnoback/:page', async (req, res) => {
 
+
+  let perPage =15;
+  let page = req.params.page || 1;
+
+  Produno 
+  .find()// finding all documents
+  .sort({_id:-1})
+  .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
+  .limit(perPage) // output just 9 items
+  .exec((err, produno) => {
+    Produno.countDocuments((err, count) => { // count to calculate the number of pages
+      if (err) return next(err);
+      res.render('produno/new-produno', {
+        produno,
+        current: page,
+        pages: Math.ceil(count / perPage)
+      });
+    });
+  });
+});
 
 router.post('/produno/new-produno',  async (req, res) => {
   const { name, title, filtro, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
@@ -272,28 +293,7 @@ router.get('/produno/delete/:id', async (req, res) => {
 
 
 
-router.get('/produnoback/:page', async (req, res) => {
 
-
-  let perPage =15;
-  let page = req.params.page || 1;
-
-  Produno 
-  .find()// finding all documents
-  .sort({_id:-1})
-  .skip((perPage * page) - perPage) // in the first page the value of the skip is 0
-  .limit(perPage) // output just 9 items
-  .exec((err, produno) => {
-    Produno.countDocuments((err, count) => { // count to calculate the number of pages
-      if (err) return next(err);
-      res.render('produno/new-produno', {
-        produno,
-        current: page,
-        pages: Math.ceil(count / perPage)
-      });
-    });
-  });
-});
 
 
 
