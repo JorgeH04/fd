@@ -87,22 +87,22 @@ router.post('/produno/new-produno',  async (req, res) => {
    const respdiez = await cloudinary.v2.uploader.upload(req.files[9].path)
 
 
-  //  const responce = await cloudinary.v2.uploader.upload(req.files[10].path)
-  //  const respdoce = await cloudinary.v2.uploader.upload(req.files[11].path)
-  //  const resptrece = await cloudinary.v2.uploader.upload(req.files[12].path)
-  //  const respcatorce = await cloudinary.v2.uploader.upload(req.files[13].path)
-  //  const respquince = await cloudinary.v2.uploader.upload(req.files[14].path)
-  //  const respdieciseis = await cloudinary.v2.uploader.upload(req.files[15].path)
-  //  const respdiecisiete = await cloudinary.v2.uploader.upload(req.files[16].path)
-  //  const respdieciocho = await cloudinary.v2.uploader.upload(req.files[17].path)
-  //  const respdiecinueve = await cloudinary.v2.uploader.upload(req.files[18].path)
+   const responce = await cloudinary.v2.uploader.upload(req.files[10].path)
+   const respdoce = await cloudinary.v2.uploader.upload(req.files[11].path)
+   const resptrece = await cloudinary.v2.uploader.upload(req.files[12].path)
+   const respcatorce = await cloudinary.v2.uploader.upload(req.files[13].path)
+   const respquince = await cloudinary.v2.uploader.upload(req.files[14].path)
+   const respdieciseis = await cloudinary.v2.uploader.upload(req.files[15].path)
+   const respdiecisiete = await cloudinary.v2.uploader.upload(req.files[16].path)
+   const respdieciocho = await cloudinary.v2.uploader.upload(req.files[17].path)
+   const respdiecinueve = await cloudinary.v2.uploader.upload(req.files[18].path)
   
-  //  const respveinte = await cloudinary.v2.uploader.upload(req.files[19].path)
-  //  const respveintiuno = await cloudinary.v2.uploader.upload(req.files[20].path)
-  //  const respveintidos = await cloudinary.v2.uploader.upload(req.files[21].path)
-  //  const respveintitres = await cloudinary.v2.uploader.upload(req.files[22].path)
-  //  const respveinticuatro = await cloudinary.v2.uploader.upload(req.files[23].path)
-  //  const respveinticinco = await cloudinary.v2.uploader.upload(req.files[24].path)
+   const respveinte = await cloudinary.v2.uploader.upload(req.files[19].path)
+   const respveintiuno = await cloudinary.v2.uploader.upload(req.files[20].path)
+   const respveintidos = await cloudinary.v2.uploader.upload(req.files[21].path)
+   const respveintitres = await cloudinary.v2.uploader.upload(req.files[22].path)
+   const respveinticuatro = await cloudinary.v2.uploader.upload(req.files[23].path)
+   const respveinticinco = await cloudinary.v2.uploader.upload(req.files[24].path)
 
    const newNote = new Produno({ 
  
@@ -119,22 +119,22 @@ router.post('/produno/new-produno',  async (req, res) => {
     imagediez:respdiez.url,
 
 
-    // imageonce:responce.url,
-    // imagedoce:respdoce.url,
-    // imagetrece:resptrece.url,
-    // imagecatorce:respcatorce.url,
-    // imagequince:respquince.url,
-    // imagedieciseis:respdieciseis.url,
-    // imagediecisiete:respdiecisiete.url,
-    // imagedieciocho:respdieciocho.url,
-    // imagediecinueve:respdiecinueve.url,
-    // imageveinte:respveinte.url,
+    imageonce:responce.url,
+    imagedoce:respdoce.url,
+    imagetrece:resptrece.url,
+    imagecatorce:respcatorce.url,
+    imagequince:respquince.url,
+    imagedieciseis:respdieciseis.url,
+    imagediecisiete:respdiecisiete.url,
+    imagedieciocho:respdieciocho.url,
+    imagediecinueve:respdiecinueve.url,
+    imageveinte:respveinte.url,
 
-    // imageveintiuno:respveintiuno.url,
-    // imageveintidos:respveintidos.url,
-    // imageveintitres:respveintitres.url,
-    // imageveinticuatro:respveinticuatro.url,
-    // imageveinticinco:respveinticinco.url,
+    imageveintiuno:respveintiuno.url,
+    imageveintidos:respveintidos.url,
+    imageveintitres:respveintitres.url,
+    imageveinticuatro:respveinticuatro.url,
+    imageveinticinco:respveinticinco.url,
 
     price
   });
