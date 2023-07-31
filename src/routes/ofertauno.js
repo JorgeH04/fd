@@ -14,13 +14,23 @@ const { isAuthenticated } = require('../helpers/auth');
 const path = require('path');
 const { unlink } = require('fs-extra');
 const cloudinary = require('cloudinary');
+
+
 cloudinary.config({
-  cloud_name:'dernadqrq',
-  api_key:'241274546791763',
-  api_secret:'EnOvxHpFoTKSdfDybes9Po6OoPI'
+  cloud_name:'dd3uzxyfv',
+  api_key:'946715245779221',
+  api_secret:'mETr4SE0tAMSbvOlsMzjUotkx5c'
   
 });
+// const multer = require('multer');
 
+// const storage = multer.diskStorage({
+//   filename: function (req, file, cb) {
+//     cb(null, file.fieldname + "-" + Date.now());
+//   },
+// });
+
+// const upload = multer({ storage });
 
 
 
@@ -40,10 +50,10 @@ router.post('/ofertauno/new-ofertauno',  async (req, res) => {
    const respdiez = await cloudinary.v2.uploader.upload(req.files[9].path) 
 
    const responce = await cloudinary.v2.uploader.upload(req.files[10].path)
-  const respdoce = await cloudinary.v2.uploader.upload(req.files[11].path)
-  const resptrece = await cloudinary.v2.uploader.upload(req.files[12].path)
-  const respcatorce = await cloudinary.v2.uploader.upload(req.files[13].path)
-  const respquince = await cloudinary.v2.uploader.upload(req.files[14].path)
+   const respdoce = await cloudinary.v2.uploader.upload(req.files[11].path)
+   const resptrece = await cloudinary.v2.uploader.upload(req.files[12].path)
+   const respcatorce = await cloudinary.v2.uploader.upload(req.files[13].path)
+   const respquince = await cloudinary.v2.uploader.upload(req.files[14].path)
    const respdieciseis = await cloudinary.v2.uploader.upload(req.files[15].path)
    const respdiecisiete = await cloudinary.v2.uploader.upload(req.files[16].path)
    const respdieciocho = await cloudinary.v2.uploader.upload(req.files[17].path)
@@ -75,7 +85,7 @@ router.post('/ofertauno/new-ofertauno',  async (req, res) => {
     imagedoce:respdoce.url,
     imagetrece:resptrece.url,
     imagecatorce:respcatorce.url,
-   imagequince:respquince.url,
+    imagequince:respquince.url,
     imagedieciseis:respdieciseis.url,
     imagediecisiete:respdiecisiete.url,
     imagedieciocho:respdieciocho.url,
@@ -98,6 +108,68 @@ router.post('/ofertauno/new-ofertauno',  async (req, res) => {
        console.log(err)
    }  
 });
+
+
+
+
+// router.post("/ofertauno/new-ofertauno", upload.array("pictures", 25), async (req, res) => {
+//   const { name, title, filtro, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, price} = req.body;
+
+//   try {
+//     let pictureFiles = req.files;
+//     //Check if files exist
+//     if (!pictureFiles)
+//       return res.status(400).json({ message: "No picture attached!" });
+//     //map through images and create a promise array using cloudinary upload function
+//     let multiplePicturePromise = pictureFiles.map((picture) =>
+//       cloudinary.v2.uploader.upload(picture.path)
+//     );
+//     // await all the cloudinary upload functions in promise.all, exactly where the magic happens
+//     let imageResponses = await Promise.all(multiplePicturePromise);
+// //console.log(imageResponses[0])
+//   //      const newNote = new Ofertauno({ 
+ 
+//   //   name, title, description, enstock, oldprice, color, colorstock, talle, amount, dolarprice, filtro,
+//   //   imageuno:resp.url,
+//   //   imagedos:respdos.url,
+//   //   imagetres:resptres.url,
+//   //   imagecuatro:respcuatro.url,
+//   //   imagecinco:respcinco.url,
+//   //   imageseis:respseis.url,
+//   //   imagesiete:respsiete.url,
+//   //   imageocho:respocho.url,
+//   //   imagenueve:respnueve.url,
+//   //   imagediez:respdiez.url,
+
+//   //   imageonce:responce.url,
+//   //   imagedoce:respdoce.url,
+//   //   imagetrece:resptrece.url,
+//   //   imagecatorce:respcatorce.url,
+//   //   imagequince:respquince.url,
+//   //   imagedieciseis:respdieciseis.url,
+//   //   imagediecisiete:respdiecisiete.url,
+//   //   imagedieciocho:respdieciocho.url,
+//   //   imagediecinueve:respdiecinueve.url,
+//   //   imageveinte:respveinte.url,
+
+//   //   imageveintiuno:respveintiuno.url,
+//   //   imageveintidos:respveintidos.url,
+//   //   imageveintitres:respveintitres.url,
+//   //   imageveinticuatro:respveinticuatro.url,
+//   //   imageveinticinco:respveinticinco.url,
+  
+//   //   price
+//   // });
+//   // await newNote.save();
+//     res.redirect('/ofertauno/add');
+
+//     //res.status(200).json({ images: imageResponses });
+//   } catch (err) {
+//     res.status(500).json({
+//       message: err.message,
+//     });
+//   }
+// });
 
  
 
