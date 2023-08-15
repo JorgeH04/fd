@@ -30,7 +30,7 @@ app.set('view engine', 'ejs');
 
 
    
-// middlewares
+// middlewaresv
 app.use(express.static(path.join(__dirname, 'public'))); 
 app.use(express.static(path.join(__dirname, 'views')));
 app.use(express.urlencoded({extended: false}));
